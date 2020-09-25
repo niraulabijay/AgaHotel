@@ -106,8 +106,7 @@ const SearchNavbar = ({form}) => {
 											}
 										}
 										</Field>
-									
-									
+
 									{/* <button onClick={DatePicker}>Apple</button> */}
 								</div>
 
