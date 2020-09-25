@@ -24,12 +24,13 @@ function App() {
 					<Route exact path="/brand">
 						<Brand />
 					</Route>
-          <Route exact path="/hotel">
-            <Hotel />
-          </Route>
-          <Route exact path="/room">
-            <Room />
-          </Route>
+          			<Route exact path="/hotel">
+            			<Hotel />
+          			</Route>
+          			<Route exact path="/room">
+            			<Room />
+          			</Route>
+					  
 				</Switch>
 				<Footer />
 			</div>

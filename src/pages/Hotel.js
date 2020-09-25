@@ -19,7 +19,7 @@ export default function Hotel() {
 				<div className="hotel-filter-page">
 					<div className="container">
 						<div className="top-title">
-							<span>5</span> Hotels found in Los Angeles.
+							<span>56</span> Hotels found in Los Angeles.
 						</div>
 						<div className="filter">
 							<a
