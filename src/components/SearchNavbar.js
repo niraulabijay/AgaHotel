@@ -22,10 +22,14 @@ const SearchNavbar = ({form}) => {
 	// const [adult, setAdult] = useState(0)
 	const getCalendar = e => {
 		e.preventDefault()
-		setCal(true)
+		document.querySelector('.rdrDateRangeWrapper').classList.add('active');
+		document.querySelector('.option-content').classList.remove('active');
+
 	}
 	const handleRoom = e =>{
 		e.preventDefault()
+		document.querySelector('.option-content').classList.add('active');
+		document.querySelector('.rdrDateRangeWrapper').classList.remove('active');
 		if(!showRoom){
 			setShowRoom(true)
 		}else{
@@ -90,8 +94,8 @@ const SearchNavbar = ({form}) => {
 							</div>
 							<div className="item" >				
 								<div className="mobile-checkdate">
-									<span ><i className="fa fa-calendar" ></i></span>
-										<Field name="dates">
+									
+										<Field name="dates" >
 										{
 											({form}) => {
 												const {values} = form
@@ -99,8 +103,15 @@ const SearchNavbar = ({form}) => {
 												console.log(format(values.selectionRange.startDate,'MMMM dd yyyy'))
 												return(
 													<>
+												<div className="checkdate-wrapper">
+												<span ><i className="fa fa-calendar" ></i></span>
 												<div onClick={getCalendar}>{format(values.selectionRange.startDate,'MMM dd yyyy')}  </div>
-												<input type="date" />
+												</div>
+												<div className="checkdate-wrapper">
+												<span ><i className="fa fa-calendar" ></i></span>
+												<div onClick={getCalendar}>{format(values.selectionRange.endDate,'MMM dd yyyy')}  </div>
+												
+												</div>
 													</>
 												)
 											}
@@ -112,15 +123,16 @@ const SearchNavbar = ({form}) => {
 
 								<div className="item-sup" id="mobile-check-title">
 									<div className="row">
-										<div className="col-6">
-											Check-in
+										<div className="col-6" onClick={getCalendar}>
+											<span className="d-block">Check-in</span>
 										</div>
-										<div className="col-6">
-											Check-out
+										<div className="col-6" onClick={getCalendar}>
+											<span className="d-block">Check-out</span>
 										</div>	
 									</div>
 								</div>
 							</div>
+						
 							<div className="item">
 								<span><i className="fas fa-users"></i></span>
 								<Field name="ocup">
@@ -194,24 +206,28 @@ const SearchNavbar = ({form}) => {
 												<input type="date" placeholder="Find a Hotel" />
 											</div>
 			
-											<div className="item-sup" id="mobile-check-title">
+											<div className="item-sup" id="mobile-check-title" onClick={getCalendar}>
 												<div className="row">
 													<div className="col-6">
-														Check-in 
+														<span >Check-in </span>
 													</div>
 													<div className="col-6">
-														Check-out
+													<span >	Check-out</span>
 													</div>	
 												</div>
 											</div>
 										</div>
-										<div className="item">
+											{/* <Field  setCal={setCal}
+                						component={DatePicker}
+              			/> */}
+										<div className="item" onClick={handleRoom}>
 											<span><i className="fas fa-users"></i></span>
 											<input type="text" placeholder="1 Room 1 Adult" />
 											<div className="item-sup">
 												Occupancy
 											</div>
 										</div>
+										{/* <Field component={RoomSelector} /> */}
 										<div className="item">
 											<span><i className="fas fa-dollar-sign"></i></span>
 											{/* <!-- <select>
@@ -229,19 +245,23 @@ const SearchNavbar = ({form}) => {
 												Search
 											</button>
 										</div>
+										
+						
+						
+						
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						{cal &&
-						<Field
+						
+						<Field  setCal={setCal}
                 						component={DatePicker}
               			/>
-						}
-						{showRoom &&
+						
+						
 						<Field component={RoomSelector} />
-						}
+						
 					</Form>
 					)}
 					

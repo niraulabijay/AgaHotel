@@ -1,12 +1,22 @@
 import React from 'react'
 import '../assets/css/roomselector.css'
 import { FieldArray, Field } from 'formik'
-
+import $ from 'jquery'
 
 const RoomSelector = ({
     form: {values, setFieldValue}
 }) => {
     console.log(values)
+    $(".option-content").focusout(function () {
+        $(this).removeClass('active');
+    });
+    const checkFocusOut = () =>{
+
+        $(".option-content").focusout(function () {
+        
+            $(this).removeClass('active');
+        });
+    }
     const handleAdult = (index, inc) => {
         let newOccupancy = values.occupancy
         if(inc){
@@ -15,6 +25,8 @@ const RoomSelector = ({
             newOccupancy[index].adult -= 1;
         }
         setFieldValue('occupancy',newOccupancy);
+        checkFocusOut();
+
     }
     const handleChild = (index, inc) => {
         let newOccupancy = values.occupancy
@@ -24,9 +36,11 @@ const RoomSelector = ({
             newOccupancy[index].child -= 1;
         }
         setFieldValue('occupancy',newOccupancy);
+        checkFocusOut();
     }
+   
     return(
-        <div className="option-content">
+        <div tabIndex="0" className="option-content">
         
         <FieldArray name="occupancy"> 
         {(arrayHelpers) => (
