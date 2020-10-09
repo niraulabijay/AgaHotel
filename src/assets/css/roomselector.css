@@ -1,8 +1,12 @@
 .option-content {
-    margin: 14px auto;
+    margin: 0px auto;
     -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     width: 277px;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    right: 0;
     max-height: 247px;
     background-color: #ffffff;
     overflow-y: auto;
@@ -109,3 +113,9 @@
     font-size: 22px;
   }
   /*# sourceMappingURL=style.css.map */
+
+  @media (max-width: 768px){
+    .option-content{
+      max-height: 80vh;
+    }
+  }
