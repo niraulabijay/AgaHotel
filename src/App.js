@@ -8,6 +8,7 @@ import Brand from "./pages/Brand";
 import About from "./pages/About";
 import Hotel from "./pages/Hotel";
 import Room from "./pages/Room";
+import FAQ from "./pages/FAQ";
 
 function App() {
 	return (
@@ -29,6 +30,9 @@ function App() {
           			</Route>
           			<Route exact path="/room">
             			<Room />
+          			</Route>
+					<Route exact path="/faq">
+            			<FAQ />
           			</Route>
 					  
 				</Switch>
