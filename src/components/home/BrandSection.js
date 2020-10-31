@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function BrandSection() {
     return (
@@ -21,9 +22,9 @@ export default function BrandSection() {
 									</a>
 								</div>
 								<div className="col-lg-3 col-6">
-									<a href="" className="brand-img">
+									<Link to="/lifeinn" className="brand-img">
 										<img src={require('../../assets/images/LYF INN.png')} alt="" />
-									</a>
+									</Link>
 								</div>
 								<div className="col-lg-3 col-6">
 									<a href="" className="brand-img">

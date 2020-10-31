@@ -1,121 +1,127 @@
 .option-content {
-    margin: 0px auto;
-    -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-    width: 277px;
-    position: absolute;
-    left: 0;
-    z-index: 9;
-    right: 0;
-    max-height: 247px;
-    background-color: #ffffff;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
-    scroll-behavior: smooth;
-  }
-  
-  .option-content .header {
-    background: #f3f3f2;
-    text-transform: capitalize;
-    color: #53565a;
-    text-align: center;
-    padding: 9px 16px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    width: 100%;
-  }
-  
-  .option-content .header .room-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .option-content .header .number {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 22px;
-  }
-  
-  .option-content .header .number #minus {
-    color: #dcdcdc;
-    cursor: pointer;
-    font-size: 22px;
-  }
-  
-  .option-content .header .number #plus {
-    color: rgba(241, 7, 80, 0.1);
-    cursor: pointer;
-    font-size: 22px;
-  }
-  
-  .option-content .room-occupancy {
-    padding: 10px 30px;
-    border-bottom: 1px solid #dcdcdc;
-  }
-  
-  .option-content .room-occupancy .sub-header {
-    text-align: center;
-    margin-bottom: 8px;
-    color: #202020;
-    font-weight: bold;
-    font-size: 12px;
-  }
-  
-  .option-content .room-occupancy .room-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-  }
-  
-  .option-content .room-occupancy .room-content span {
-    font-size: 12px;
-  }
-  
-  .option-content .room-occupancy .number {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 22px;
-  }
-  
-  .option-content .room-occupancy .number #minus {
-    color: #dcdcdc;
-    cursor: pointer;
-    font-size: 22px;
-  }
-  
-  .option-content .room-occupancy .number #plus {
-    color: rgba(241, 7, 80, 0.1);
-    cursor: pointer;
-    font-size: 22px;
-  }
-  /*# sourceMappingURL=style.css.map */
+  margin: 0px auto;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  position: absolute;
+  left: -44px;
+  z-index: 9;
+  right: 0;
+  top: 100%;
+  margin-top: 12px;
+  max-height: 280px;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% !important;
+  border-radius: 32px !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  scroll-behavior: smooth;
+}
 
-  @media (max-width: 768px){
-    .option-content{
-      max-height: 80vh;
-    }
+.option-content .header {
+  background: #f3f3f2;
+  text-transform: capitalize;
+  color: #53565a;
+  text-align: center;
+  padding: 9px 16px;
+  position: -webkit-sticky;
+  position: sticky;
+  font-size: 16px;
+  font-weight: 600;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+}
+
+.option-content .header .room-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.option-content .header .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.option-content .header .number #minus {
+  color: #dcdcdc;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.option-content .header .number #plus {
+  color: rgba(241, 7, 80, 0.1);
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.option-content .room-occupancy {
+  padding: 16px 0px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.option-content .room-occupancy .sub-header {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #202020;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.option-content .room-occupancy .room-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.option-content .room-occupancy .room-content span {
+  font-size: 12px;
+}
+
+.option-content .room-occupancy .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.option-content .room-occupancy .number #minus {
+  color: #dcdcdc;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.option-content .room-occupancy .number #plus {
+  color: rgba(241, 7, 80, 0.1);
+  cursor: pointer;
+  font-size: 22px;
+}
+/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 768px) {
+  .option-content {
+    max-height: 80vh;
   }
+}
