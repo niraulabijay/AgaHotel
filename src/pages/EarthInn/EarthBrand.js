@@ -6,13 +6,15 @@ import Location from "../../components/BrandCommon/Location";
 import Services from "../../components/EarthInn/Services";
 import Welcome from "../../components/EarthInn/Welcome";
 
-export default function EarthBrand() {
+export default function EarthBrand({ data }) {
+  console.log(data)
+  const { banner,brand,experience,services,  ...rest } = data;
   return (
     <>
-      <BrandBanner />
+      <BrandBanner brand={brand} banner={banner} />
       <div className="earthinn-brand">
-          <Welcome />
-        <Services />
+        <Welcome />
+        <Services services={services}/>
         <Room />
         <Location />
         <BrandContact />

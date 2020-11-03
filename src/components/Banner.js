@@ -57,7 +57,7 @@ export default function Banner() {
 									<a href="">Bookings</a>
 								</li>
 								<li>
-									<a href="">FAQ</a>
+									<Link to="/faq">FAQ</Link>
 								</li>
 								<li>
 									<select name="" id="">
@@ -68,20 +68,20 @@ export default function Banner() {
 							</ul>
 							<ul className="second-navbar-wrapper">
 								<li>
-									<NavLink to="/brand" >Brands</NavLink>
+									<NavLink to="/deal" >Deals</NavLink>
 								</li>
 
-								<li>
-									<a href="">Destination</a>
-								</li>
-								<li>
-									<a href="">Deals</a>
-								</li>
 								<li>
 									<NavLink to="/about">About</NavLink>
 								</li>
 								<li>
-									<a href="">Rewards</a>
+									<NavLink to="/supply">Supply</NavLink>
+								</li>
+								<li>
+									<NavLink to="/franchise">Franchise</NavLink>
+								</li>
+								<li>
+									<Link to="/register">Join Us</Link>
 								</li>
 							</ul>
 						</div>

@@ -1,0 +1,159 @@
+.franchise-welcome {
+  padding: 100px 0px 100px 0px;
+}
+
+.franchise-welcome .title {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+}
+
+.franchise-welcome .description {
+  line-height: 24px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.franchise-welcome .franchise-welcome-content {
+  padding: 45px;
+  /* padding-left: 60px; */
+  /* background-image: url("../images/new.png"); */
+  background-size: cover;
+  border-radius: 10px;
+  /* margin-left: -90px; */
+  /* -webkit-box-shadow: 0px 0px 15px #e1e1e1; */
+  /* box-shadow: 0px 0px 15px #e1e1e1; */
+}
+
+.franchise-welcome .img-container {
+  height: 450px;
+  width: 320px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.franchise-welcome .img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.franchise-title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+}
+.franchise-para {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+@media (max-width: 992px) {
+  .franchise-welcome {
+    padding: 30px 0px;
+  }
+  .franchise-welcome .description {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+  }
+  .franchise-welcome .title {
+    text-align: center;
+    font-size: 20px;
+  }
+  .franchise-welcome .thumbnail-wrapper {
+    margin-top: 0px;
+  }
+  .franchise-welcome .thumbnail-wrapper .franchise-welcome-thumbnails {
+    margin-top: 30px;
+  }
+  .franchise-welcome .franchise-welcome-content {
+    margin-left: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 15px;
+    background: none;
+  }
+  .franchise-welcome .img-container {
+    width: auto;
+  }
+}
+
+.franchise-form-container {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.franchise-form-container .header {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.franchise-form-container .sub-header {
+  text-align: center;
+  font-size: 14px;
+}
+
+.franchise-form-container .franchise-form {
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  padding: 40px;
+  margin-bottom: 10px;
+}
+
+.franchise-form-container .franchise-form .form-group {
+  margin-bottom: 40px;
+}
+
+.franchise-form-container .franchise-form .form-group label {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+.franchise-form-container .franchise-form .form-group .form-control {
+  height: calc(1em + 0.75rem + 2px);
+}
+
+.franchise-form-container .franchise-form .form-group input,
+.franchise-form-container .franchise-form .form-group textarea {
+  border: none;
+  border-bottom: 1px solid #707070;
+  border-radius: 0px;
+}
+
+.franchise-form-container .franchise-form .form-group textarea:focus,
+.franchise-form-container .franchise-form .form-group input:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.franchise-form-container .franchise-form .form-btn {
+  text-align: right;
+}
+
+.franchise-form-container .franchise-form .form-btn button {
+  color: white;
+  background-color: #76a0fc;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 7px;
+  border: none;
+}
+
+.franchise-form-container .franchise-form .form-btn button:hover {
+  text-decoration: none;
+}

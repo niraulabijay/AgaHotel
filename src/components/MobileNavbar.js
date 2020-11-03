@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default function MobileNavbar() {
 	function closeNav(e) {
@@ -11,13 +12,13 @@ export default function MobileNavbar() {
 				<a href="" className="closebtn" onClick={closeNav}>
 					&times;
 				</a>
-				<a href="#">Reservation</a>
-				<a href="#">My Booking</a>
-				<a href="#">FAQ</a>
-				<a href="#">Brands</a>
-				<a href="#">Destination</a>
-				<a href="">AGA Meetings</a>
-				<a href="">Deals</a>
+				<Link href="#">Deals</Link>
+				<Link href="#">About</Link>
+				<Link href="#">FAQ</Link>
+				<Link href="#">Supply</Link>
+				<Link href="#">Franchise</Link>
+				<Link href="">Join Us</Link>
+				{/* <a href="">Deals</a> */}
 			</div>
 		</>
 	);

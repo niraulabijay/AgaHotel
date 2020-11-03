@@ -43,6 +43,7 @@
   #faq .faq-container .faq-links li {
     list-style: none;
     margin-bottom: 25px;
+    cursor: pointer;
   }
   
   #faq .faq-container .faq-links li a {

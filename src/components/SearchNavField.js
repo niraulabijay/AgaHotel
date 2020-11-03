@@ -23,7 +23,18 @@ export default function SearchNavField() {
   const [cal, setCal] = useState(false);
   const [showRoom, setShowRoom] = useState(false);
   const [adultNumber, setAdultNumber] = useState(0);
-  // const [adult, setAdult] = useState(0)
+
+  const initialValues={
+    destination: "",
+    checkIn: "",
+    occupancy: [{ adult: 1, child: 0, id: "" + Math.random() }],
+    specialRate: "",
+    selectionRange: {
+      startDate: startDate,
+      endDate: endDate,
+      key: "selection",
+    },
+  }
   const openMobileDateBar = (e) => {
     e.preventDefault();
     document.getElementById("mobileDateBar").style.width = "100%";
@@ -45,13 +56,6 @@ export default function SearchNavField() {
     e.preventDefault();
     document.getElementById("occupancyBar").style.width = "0";
   };
-  // const getCalendar = (e) => {
-  // 	e.preventDefault();
-  // 	document
-  // 		.querySelectorAll(".rdrDateRangeWrapper")[1]
-  // 		.classList.add("active");
-  // 	document.querySelectorAll(".option-content")[1].classList.remove("active");
-  // };
   const handleRoom = (e) => {
     e.preventDefault();
     document.querySelectorAll(".option-content")[1].classList.add("active");
@@ -82,18 +86,9 @@ export default function SearchNavField() {
   return (
     <div className="search-wrapper" id="searchBar">
       <Formik
-        initialValues={{
-          destination: "",
-          checkIn: "",
-          occupancy: [{ adult: 1, child: 0, id: "" + Math.random() }],
-          specialRate: "",
-          selectionRange: {
-            startDate: startDate,
-            endDate: endDate,
-            key: "selection",
-          },
-        }}
+        initialValues={initialValues}
         onSubmit={(data, { setSubmitting }) => {
+          console.log(data)
           setSubmitting(true);
           setSubmitting(false);
         }}
@@ -116,9 +111,7 @@ export default function SearchNavField() {
               </div>
 
               <div className="item item-calender">
-                  <span className="search-logo">
-                    <i class="fas fa-calendar-week"></i>
-                  </span>
+                  
                   <div className="item-sup sup-calendar">
                     <div>Check In</div>
                     <div>Check Out</div>
@@ -129,8 +122,8 @@ export default function SearchNavField() {
                       control="date"
                       type="text"
                       name="selectionRange"
-                      startDate={startDate}
-                      endDate={endDate}
+                      startDate={initialValues.selectionRange.startDate}
+                      endDate={initialValues.selectionRange.endDate}
                     />
                   </div>
               </div>

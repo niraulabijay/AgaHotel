@@ -8,14 +8,15 @@ const FAQSection = ({questions}) => {
                                 <React.Fragment key={question.id}>
                                 <div className="text">
                                     <div className="ques">
-                                        {question.question}
+                                        <div dangerouslySetInnerHTML={{__html: question.question}} />
                                     </div>
                                     <div className="arrow">
                                         <i className="fas fa-greater-than"></i>
                                     </div>
                                 </div>
                                 <div className="para">
-                                    {question.answer}
+                                    <div dangerouslySetInnerHTML={{__html: question.answer}} />
+
                                 </div>
                                 </React.Fragment>
                             )}

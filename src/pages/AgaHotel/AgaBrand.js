@@ -7,15 +7,17 @@ import BrandContact from "../../components/brand/BrandContact";
 import Experience from "../../components/AgaHotel/Experience";
 import Room from "../../components/BrandCommon/Room";
 
-export default function AgaBrand() {
+export default function AgaBrand({ data }) {
+
+  const { brand, banner, services, experience, ...rest } = data;
   return (
     <>
-      <BrandBanner />
+      <BrandBanner brand={brand} banner={banner} />
       <div className="aga-brand">
         <Welcome />
-        <Experience />
+        <Experience brand={brand} experience={experience} />
         <WeProvide />
-        <DiscoverMore />
+        <DiscoverMore services={services} />
         <Room />
         <BrandContact />
       </div>

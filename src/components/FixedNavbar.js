@@ -45,22 +45,22 @@ export default function FixedNavbar() {
               </li>
             </ul>
             <ul className="second-navbar-wrapper">
-              <li>
-                <a href=""> Deals </a>
-              </li>
+                <li>
+									<NavLink to="/deal" >Deals</NavLink>
+								</li>
 
-              <li>
-                <a href="">Destination</a>
-              </li>
-              <li>
-                <a href=""> Deals </a>
-              </li>
-              <li>
-                <NavLink to="/about"> About </NavLink>
-              </li>
-              <li>
-                <a href=""> Rewards </a>
-              </li>
+								<li>
+									<NavLink to="/about">About</NavLink>
+								</li>
+								<li>
+									<NavLink to="/supply">Supply</NavLink>
+								</li>
+								<li>
+									<NavLink to="/franchise">Franchise</NavLink>
+								</li>
+								<li>
+									<Link to="/register">Join Us</Link>
+								</li>
             </ul>
           </div>
           <div className="bars d-block d-md-none">

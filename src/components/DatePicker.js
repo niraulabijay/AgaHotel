@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker, DateRange } from "react-date-range";
-import { Field, ErrorMessage } from "formik";
-import {addDays} from 'date-fns'
+import { Field, ErrorMessage, setFieldValue } from "formik";
+import {addDays, format, set} from 'date-fns'
 
 const DatePicker = (props) => {
 
@@ -11,7 +11,6 @@ const DatePicker = (props) => {
   const [open, setOpen] = useState(false);
   const node = useRef();
   
-  // console.log(open)
 
   const handleClick = (e) => {
     if (node.current.contains(e.target)) {
@@ -35,32 +34,51 @@ const DatePicker = (props) => {
       {/* <label htmlFor={name}>{label}</label> */}
       <div className="row">
         <div className="col-6">
-          <Field
-            type="text"
-            placeholder=""
-            name="checkin"
-            onClick={() => setOpen(!open)}
-            value={startDate}
-          />
+          <span className="search-logo">
+            <i class="fas fa-calendar-week"></i>
+          </span>
+          <Field name="checkin">
+            {({ form }) => {
+              const { values } = form;
+              return (
+                <>
+                  <input
+                    type="text"
+                    value={format(
+                      values.selectionRange.startDate,
+                      "MMM dd yyyy"
+                    )}
+                    onClick={() => setOpen(!open)}
+                  ></input>
+                </>
+              );
+            }}
+          </Field>
         </div>
         <div className="col-6">
-          <Field
-            type="text"
-            placeholder=""
-            name="checkin"
-            onClick={() => setOpen(!open)}
-            value={endDate}
-          />
+          <span className="search-logo">
+            <i class="fas fa-calendar-week"></i>
+          </span>
+          <Field name="checkin">
+            {({ form }) => {
+              const { values } = form;
+              return (
+                <>
+                  <input
+                    type="text"
+                    value={format(values.selectionRange.endDate, "MMM dd yyyy")}
+                    onClick={() => setOpen(!open)}
+                  ></input>
+                </>
+              );
+            }}
+          </Field>
         </div>
       </div>
 
-      {/* <button type="button" onClick={() => setOpen(!open)}>
-        Button
-      </button> */}
       {open && (
         <Field name={name}>
           {({ form: { values, setFieldValue } }) => {
-            console.log(values);
             return (
               <DateRange
                 ranges={[values.selectionRange]}

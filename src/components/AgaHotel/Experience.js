@@ -1,13 +1,14 @@
 import React from "react";
 
-export default function BrandExperience() {
+export default function BrandExperience(props) {
+  const{brand,experience} = props
   return (
     <>
       <div className="experience">
         <div className="row">
           <div className=" col-md-5">
             <div className="img-container">
-              <img src={require("../../assets/images/flower.png")} alt="" />
+              <img src={experience.image} alt="" />
             </div>
           </div>
           <div className="col-md-4">
@@ -25,7 +26,7 @@ export default function BrandExperience() {
           <div className="col-md-3 logo-holder">
             <div className="logo-container">
               <img
-                src={require("../../assets/images/agaLogo.png")}
+                src={brand.logo}
                 className="img-fluid"
                 alt=""
               />

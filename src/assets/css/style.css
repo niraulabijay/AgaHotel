@@ -2400,6 +2400,8 @@ body {
 .brand-page .experience .img-container img {
   height: inherit;
   width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .brand-page .experience .main-title {
@@ -2566,26 +2568,56 @@ body {
   }
 }
 
-.banner-section .img-container img {
-  height: 70vh;
-  width: 100%;
+.about-page {
+  background-color: #fafafa;
+  overflow-x: hidden;
 }
 
 .about-content {
   margin-top: 75px;
+  overflow-x: hidden;
 }
 
-.about-banner {
-  height: calc(100vh - 75px);
-  width: 100%;
+.about-content .about-text {
+  padding: 20% 10% 0;
+}
+
+.about-content .about-text .header {
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 128px;
+}
+
+.about-content .about-text .para {
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.about-content .about-banner {
+  height: 600px;
+}
+
+.about-content .about-banner img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 992px) {
   .about-content {
     margin-top: 60px;
   }
-  .about-banner {
-    height: 300px;
+  .about-content .about-text {
+    padding: 1% 10% 0;
+  }
+  .about-content .about-text .header {
+    font-size: 40px;
+    line-height: 90px;
+  }
+  .about-content .about-banner {
+    height: 400px;
   }
 }
 
@@ -2596,47 +2628,31 @@ body {
 }
 
 .owner {
-  margin-top: 60px;
+  margin-top: 160px;
 }
 
 .owner .main-title {
-  font-style: italic;
   font-weight: normal;
   font-size: 40px;
   font-family: "Lora", serif;
   text-align: center;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
   text-transform: uppercase;
   color: #000000;
 }
 
 .owner .owner-wrapper {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .owner .owner-wrapper .owner-img {
-  max-height: 500px;
-  max-width: 500px;
+  max-height: 430px;
+  max-width: 421px;
   position: relative;
 }
 
 .owner .owner-wrapper .owner-img img {
-  height: 500px;
-  width: 500px;
-}
-
-.owner .owner-wrapper .owner-img::after {
-  position: absolute;
-  height: inherit;
-  width: inherit;
-  content: "";
-  top: -12px;
-  left: -12px;
-  bottom: 12px;
-  right: 12px;
-  border: 1px solid black;
-  z-index: -1;
+  height: 430px;
+  width: 421px;
 }
 
 .owner .owner-wrapper .owner-wrap {
@@ -2654,15 +2670,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 50px;
 }
 
 .owner .owner-wrapper .owner-wrap .owner-name {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Lora", serif;
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 
 .owner .owner-wrapper .owner-wrap .description {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .owner .owner-wrapper2 {
@@ -2670,27 +2689,14 @@ body {
 }
 
 .owner .owner-wrapper2 .owner-img {
-  max-height: 500px;
-  max-width: 500px;
+  max-height: 430px;
+  max-width: 421px;
   position: relative;
 }
 
 .owner .owner-wrapper2 .owner-img img {
-  height: 500px;
-  width: 500px;
-}
-
-.owner .owner-wrapper2 .owner-img::after {
-  position: absolute;
-  height: inherit;
-  width: inherit;
-  content: "";
-  top: -12px;
-  left: 12px;
-  bottom: 12px;
-  right: -12px;
-  border: 1px solid black;
-  z-index: -1;
+  height: 430px;
+  width: 421px;
 }
 
 .owner .owner-wrapper2 .owner-wrap {
@@ -2709,15 +2715,18 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: right;
+  margin-right: 50px;
 }
 
 .owner .owner-wrapper2 .owner-wrap .owner-name {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Lora", serif;
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 
 .owner .owner-wrapper2 .owner-wrap .description {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -2759,11 +2768,12 @@ body {
 }
 
 .overview {
-  padding: 140px 0px 60px 0px;
+  padding-top: 140px;
+  overflow-x: hidden;
 }
 
 .overview .title {
-  font-size: 40px;
+  font-size: 90px;
   color: #000;
   letter-spacing: 1px;
   margin-bottom: 30px;
@@ -2771,25 +2781,17 @@ body {
 }
 
 .overview .description {
-  line-height: 24px;
+  line-height: 34px;
   text-align: justify;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .overview .overview-content {
-  margin-top: 60px;
-  padding: 45px 30px;
-  background: #fff;
-  border-radius: 10px;
-  padding-bottom: 60px;
-  margin-left: -180px;
-  -webkit-box-shadow: 0px 0px 15px #e1e1e1;
-          box-shadow: 0px 0px 15px #e1e1e1;
+  padding: 70px 100px 0px;
 }
 
 .overview .img-container {
-  height: 410px;
-  border-radius: 5px;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -2800,12 +2802,13 @@ body {
      object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .overview {
     padding-top: 120px;
   }
   .overview .title {
     text-align: center;
+    font-size: 60px;
   }
   .overview .img-container {
     height: 250px;
@@ -2815,7 +2818,8 @@ body {
     margin-left: 0px;
     -webkit-box-shadow: none;
             box-shadow: none;
-    padding: 0px 10px;
+    padding: 0px 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -2833,17 +2837,22 @@ body {
 }
 
 .mission .subtitle {
-  font-size: 19px;
+  font-size: 18px;
   margin-bottom: 120px;
 }
 
 .mission .img-container {
-  height: 80px;
+  height: auto;
   overflow: hidden;
 }
 
 .mission .img-container img {
   height: 100px;
+  border: 1px solid #575756;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0px 20px;
 }
 
 .mission .name {
@@ -2883,6 +2892,8 @@ body {
 .experience .img-container img {
   height: inherit;
   width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .experience .main-title {

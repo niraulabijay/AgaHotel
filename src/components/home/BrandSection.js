@@ -1,7 +1,34 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
+import Axios from 'axios'
+import axiosInstance from '../../helpers/axios'
 
 export default function BrandSection() {
+
+	const [brands, setBrands] = useState([])
+
+	useEffect(() => {
+
+		let source = Axios.CancelToken.source();
+		const loadData = async() =>{
+			try{
+				const response = axiosInstance.get('/brands',{
+					cancelToken: source.token
+				});
+				console.log((await response).data)
+				setBrands((await response).data.brands)
+			}catch(error){
+				if(!Axios.isCancel(error)){
+					throw error
+				}
+			}return () => {
+				source.cancel();
+			}
+		}
+		loadData();
+	}, [])
+  console.log(brands)
+
     return (
         <>
          <div className="brands">
@@ -16,26 +43,17 @@ export default function BrandSection() {
 					<div className="brand-list">
 						<div className="container">
 							<div className="row">
+								{brands && 
+								brands.map((brand, index)=>
 								<div className="col-lg-3 col-6">
 									<a href="" className="brand-img">
-										<img src={require("../../assets/images/AGA logo.png")} alt="" />
+										<Link to={"/brand/"+brand.slug}>
+										<img src={brand.logo} alt="" />
+										</Link>
 									</a>
 								</div>
-								<div className="col-lg-3 col-6">
-									<Link to="/lifeinn" className="brand-img">
-										<img src={require('../../assets/images/LYF INN.png')} alt="" />
-									</Link>
-								</div>
-								<div className="col-lg-3 col-6">
-									<a href="" className="brand-img">
-										<img src={require('../../assets/images/BLUE.png')} alt="" />
-									</a>
-								</div>
-								<div className="col-lg-3 col-6">
-									<a href="" className="brand-img">
-										<img src={require('../../assets/images/ERTH INN.png')} alt="" />
-									</a>
-								</div>
+								)
+								}
 							</div>
 						</div>
 					</div>
