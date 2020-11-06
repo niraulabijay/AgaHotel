@@ -31,7 +31,7 @@ export default function BrandSection() {
 
     return (
         <>
-         <div className="brands">
+         <div className="brands" id="brandSection">
 					<div className="main-title">Our Brands</div>
 					<div className="stars">
 						<span>
