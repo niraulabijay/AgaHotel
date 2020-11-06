@@ -14,13 +14,10 @@ export default function BrandExperience(props) {
           <div className="col-md-4">
             <div className="main-title">The Experience</div>
             <div className="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aut
-              vel fugit dolorum incidunt at ducimus porro placeat similique
-              suscipit quas inventore esse, enim ipsam doloremque dolore
-              exercitationem necessitatibus ipsa.Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Quam aut vel fugit dolorum incidunt
-              at ducimus porro placeat similique suscipit quas inventore esse,
-              enim ipsam doloremque dolore exercitationem necessitatibus ipsa.
+            Your experience matters the most to AGA Hotel Franchise.
+             We provide you with very comfortable Bedrooms, Swimming Pool, Gym, Cafeteria, Dining hall and Spa.
+              Our Hotels are conveniently located near popular destinations, restaurants, museums and tourist areas. 
+            We want your stay at AGA Hotels to be a memorable one.
             </div>
           </div>
           <div className="col-md-3 logo-holder">

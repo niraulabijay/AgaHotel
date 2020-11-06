@@ -13,6 +13,7 @@ import DatePicker from "./DatePicker";
 import { addDays, set, format } from "date-fns";
 import RoomSelector from "./RoomSelector";
 import FormikControl from "./FormikComponent/FormikControl";
+import WhereTo from "./WhereTo";
 
 const validationSchema = Yup.object({
   destination: Yup.string().required("This Field Cannot be Empty"),
@@ -24,7 +25,7 @@ export default function SearchNavField() {
   const [showRoom, setShowRoom] = useState(false);
   const [adultNumber, setAdultNumber] = useState(0);
 
-  const initialValues={
+  const initialValues = {
     destination: "",
     checkIn: "",
     occupancy: [{ adult: 1, child: 0, id: "" + Math.random() }],
@@ -34,7 +35,7 @@ export default function SearchNavField() {
       endDate: endDate,
       key: "selection",
     },
-  }
+  };
   const openMobileDateBar = (e) => {
     e.preventDefault();
     document.getElementById("mobileDateBar").style.width = "100%";
@@ -88,7 +89,7 @@ export default function SearchNavField() {
       <Formik
         initialValues={initialValues}
         onSubmit={(data, { setSubmitting }) => {
-          console.log(data)
+          console.log(data);
           setSubmitting(true);
           setSubmitting(false);
         }}
@@ -111,30 +112,27 @@ export default function SearchNavField() {
               </div>
 
               <div className="item item-calender">
-                  
-                  <div className="item-sup sup-calendar">
-                    <div>Check In</div>
-                    <div>Check Out</div>
-                  </div>
+                <div className="item-sup sup-calendar">
+                  <div>Check In</div>
+                  <div>Check Out</div>
+                </div>
 
-                  <div className="mobile-checkdate">
-                    <FormikControl
-                      control="date"
-                      type="text"
-                      name="selectionRange"
-                      startDate={initialValues.selectionRange.startDate}
-                      endDate={initialValues.selectionRange.endDate}
-                    />
-                  </div>
+                <div className="mobile-checkdate">
+                  <FormikControl
+                    control="date"
+                    type="text"
+                    name="selectionRange"
+                    startDate={initialValues.selectionRange.startDate}
+                    endDate={initialValues.selectionRange.endDate}
+                  />
+                </div>
               </div>
 
               <div className="item">
                 <span className="search-logo">
                   <i className="fas fa-users"></i>
                 </span>
-                <FormikControl
-                control="occupancy"
-                name="occupancy" />
+                <FormikControl control="occupancy" name="occupancy" />
                 {/* value={`${values.occupancy.length} Room ${adultNumber}`} */}
                 <div className="item-sup">Occupancy</div>
               </div>
@@ -145,6 +143,8 @@ export default function SearchNavField() {
           </Form>
         )}
       </Formik>
+
+     <WhereTo />
     </div>
   );
 }

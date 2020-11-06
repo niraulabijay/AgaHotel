@@ -25,7 +25,7 @@ export default function FixedNavbar() {
           <div className="primary-content">
             <ul className="first-navbar-wrapper">
               <li>
-                <i className="fa fa-phone"></i>
+                <i class="fas fa-phone-alt"></i>
                 <select name="" id="">
                   <option value="">+1 (415) - 555 2671</option>
                   <option value="">+1 (415) - 554 2661</option>
@@ -45,22 +45,22 @@ export default function FixedNavbar() {
               </li>
             </ul>
             <ul className="second-navbar-wrapper">
-                <li>
-									<NavLink to="/deal" >Deals</NavLink>
-								</li>
+              <li>
+                <NavLink to="/deal">Deals</NavLink>
+              </li>
 
-								<li>
-									<NavLink to="/about">About</NavLink>
-								</li>
-								<li>
-									<NavLink to="/supply">Supply</NavLink>
-								</li>
-								<li>
-									<NavLink to="/franchise">Franchise</NavLink>
-								</li>
-								<li>
-									<Link to="/register">Join Us</Link>
-								</li>
+              <li>
+                <NavLink to="/about">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/supply">Supply</NavLink>
+              </li>
+              <li>
+                <NavLink to="/franchise">Franchise</NavLink>
+              </li>
+              <li>
+                <Link to="/register">Join Us</Link>
+              </li>
             </ul>
           </div>
           <div className="bars d-block d-md-none">

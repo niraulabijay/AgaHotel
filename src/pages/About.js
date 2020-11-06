@@ -16,10 +16,15 @@ export default function About() {
               <div className="about-text">
                 <div className="header">About us</div>
                 <div className="para">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Ipsum obcaecati, ea recusandae officia mollitia aperiam est id
-                  doloremque autem, iure quis dolores accusantium eaque sapiente
-                  nisi sequi, voluptate repellendus ad.
+                  During your stay at hotels, we believe that you should get a
+                  5-star treatment without spending a ridiculous amount of
+                  money. On top of that, we think you should be treated and
+                  taken care of like a family member. So, we started AGA Hotels
+                  with a mission of providing the best customer service at a
+                  very affordable rate. Our every staff member is trained to
+                  provide you with phenomenal customer service and treat you
+                  like a family member. Our rooms, dining area, pools, gyms are
+                  designed to provide 100% Customer Satisfaction.
                 </div>
               </div>
             </div>
@@ -41,7 +46,7 @@ export default function About() {
               <div className="col-md-4 offset-md-1">
                 <div className="owner-img">
                   <img
-                    src={require("../assets/images/owner2.jpg")}
+                    src={require("../assets/images/ArmaanPatel.jpg")}
                     className="img-fluid"
                     alt=""
                   />
@@ -49,12 +54,13 @@ export default function About() {
               </div>
               <div className="col-md-6">
                 <div className="owner-wrap">
-                  <div className="owner-name">Jaylon Donin</div>
+                  <div className="owner-name">Armaan Patel</div>
                   <div className="description">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quae maxime deleniti iusto fugit impedit esse possimus sed
-                    ducimus debitis. Minima harum et facere porro! Quae eveniet
-                    odit fugiat ab id?
+                    Our visionary and highly enthusiastic co-founder Armaan
+                    Patel is committed to build a highly customer-centric Hotel
+                    Franchise. He believes in building a place where people can
+                    enjoy their stay with their family and receive optimum level
+                    customer service.
                   </div>
                 </div>
               </div>
@@ -63,7 +69,7 @@ export default function About() {
               <div className="col-md-4 order-md-1">
                 <div className="owner-img">
                   <img
-                    src={require("../assets/images/owner1.jpg")}
+                    src={require("../assets/images/YashDesai.jpg")}
                     className="img-fluid"
                     alt=""
                   />
@@ -71,12 +77,13 @@ export default function About() {
               </div>
               <div className="col-md-6 order-md-0">
                 <div className="owner-wrap">
-                  <div className="owner-name">Davis Philips</div>
+                  <div className="owner-name">Yash Desai</div>
                   <div className="description">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quae maxime deleniti iusto fugit impedit esse possimus sed
-                    ducimus debitis. Minima harum et facere porro! Quae eveniet
-                    odit fugiat ab id?
+                    Entrepreneurial minded co-founder Yash Desai has envisioned
+                    a chain of hotels that will be loved by people for its
+                    supreme customer service. He focuses on various aspects that
+                    will help customers receive a 5-star service without
+                    breaking their banks.
                   </div>
                 </div>
               </div>

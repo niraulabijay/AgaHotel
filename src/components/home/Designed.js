@@ -50,11 +50,10 @@ export default function Designed() {
 									<div className="img-container">
 										<img src={require('../../assets/images/slider 1.png')} alt="" />
 									</div>
-									<div className="title">Refreshing Bath</div>
+									<div className="title">Proximity</div>
 									<div className="description">
-										Retreat to your personal sanctuary to unwind and recharge.
-										Revive your sense of well-being with our essential bath
-										amenities.
+									We are very close to some of the famous destinations like Hollywood, Disneyland, Beaches, Restaurants and Museums. 
+									You and your family can easily visit multiple locations in a day.
 									</div>
 								</div>
 							</div>
@@ -63,11 +62,11 @@ export default function Designed() {
 									<div className="img-container">
 										<img src={require('../../assets/images/slider 2.png')} alt="" />
 									</div>
-									<div className="title">Sleep Experience</div>
+									<div className="title">Bedrooms</div>
 									<div className="description">
-										Retreat to your personal sanctuary to unwind and recharge.
-										Revive your sense of well-being with our essential bath
-										amenities.
+									We have the most clean and comfortable bedrooms for you. 
+									We pride ourselves in selecting high quality mattresses, comfortable bed sheets 
+									and cozy pillows so you can have a very restful sleep.
 									</div>
 								</div>
 							</div>
@@ -76,11 +75,10 @@ export default function Designed() {
 									<div className="img-container">
 										<img src={require('../../assets/images/slider 3.png')} alt="" />
 									</div>
-									<div className="title">Inspired Workouts</div>
+									<div className="title">Workout Area</div>
 									<div className="description">
-										Retreat to your personal sanctuary to unwind and recharge.
-										Revive your sense of well-being with our essential bath
-										amenities.
+									You don’t have to compromise your fitness during your stay at AGA Hotels. 
+									We have a well-equipped fitness hall where you can enjoy your exercises.
 									</div>
 								</div>
 							</div>
@@ -91,9 +89,8 @@ export default function Designed() {
 									</div>
 									<div className="title">Balanced Breakfast</div>
 									<div className="description">
-										Retreat to your personal sanctuary to unwind and recharge.
-										Revive your sense of well-being with our essential bath
-										amenities.
+									We take care of the most important meal of the day for you. 
+									Our chef creates our breakfast menu in a way that you can have a delicious and a healthy meal.
 									</div>
 								</div>
 							</div>
@@ -102,11 +99,10 @@ export default function Designed() {
 									<div className="img-container">
 										<img src={require('../../assets/images/slider 3.png')} alt="" />
 									</div>
-									<div className="title">Inspired Workouts</div>
+									<div className="title">Swimming Pool</div>
 									<div className="description">
-										Retreat to your personal sanctuary to unwind and recharge.
-										Revive your sense of well-being with our essential bath
-										amenities.
+									Have a relaxing day by enjoying the warm weather of California in our pool area. 
+									It is a perfect place for you and your family to enjoy your stay at AGA Hotels.
 									</div>
 								</div>
 							</div>

@@ -44,10 +44,8 @@ export default function Room() {
           <div className="row">
             <div className="col-md-3 room-detail">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur culpa labore minus libero mollitia et esse,
-                molestiae laboriosam? Recusandae suscipit dicta unde alias earum
-                illum blanditiis, dolorem enim maxime voluptas!
+              Lyfe Inn rooms are designed to make sure you feel very comfortable and cozy. 
+              We use top-grade mattresses, clean and high quality bed sheets and very cozy pillows.
               </p>
             </div>
             <div className="col-md-9">

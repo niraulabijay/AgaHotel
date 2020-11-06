@@ -7,10 +7,8 @@ function Services({ services }) {
       <div className="earthinn-services">
         <div className="header">Services</div>
         <div className="sub-header">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-          pariatur assumenda nobis voluptatum deserunt sint error voluptates.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-          pariatur assumenda nobis voluptatum deserunt sint error voluptates!
+        Earth Inn provides  various services and amenities to make your stay comfortable. 
+        We believe in making your stay memorable.
         </div>
 
         <div className="dis-container">

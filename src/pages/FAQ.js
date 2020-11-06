@@ -11,7 +11,7 @@ const FAQ = () => {
         <div className="fixed-navbar">
         <FixedNavbar />
         </div>
-        <div className="content">
+        <div className="faqs-content">
         <section id="faq">
             <div className="container">
                 <FAQContent />

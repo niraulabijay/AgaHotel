@@ -7,19 +7,17 @@ export default function MobileNavbar() {
 		document.getElementById("mySidenav").style.width = "0";
 	}
 	return (
-		<>
-			<div id="mySidenav" className="sidenav">
-				<a href="" className="closebtn" onClick={closeNav}>
-					&times;
-				</a>
-				<Link href="#">Deals</Link>
-				<Link href="#">About</Link>
-				<Link href="#">FAQ</Link>
-				<Link href="#">Supply</Link>
-				<Link href="#">Franchise</Link>
-				<Link href="">Join Us</Link>
-				{/* <a href="">Deals</a> */}
-			</div>
-		</>
-	);
+    <>
+      <div id="mySidenav" className="sidenav">
+        <a href="" className="closebtn" onClick={closeNav}>
+          &times;
+        </a>
+        <Link to="/about">About</Link>
+        <Link to="/supply">Supply</Link>
+        <Link to="/franchise">Franchise</Link>
+        <Link to="/faq">FAQ</Link>
+        <Link to="/brand/aga-hotel">Brands</Link>
+      </div>
+    </>
+  );
 }

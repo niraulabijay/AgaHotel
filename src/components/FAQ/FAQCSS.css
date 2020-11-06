@@ -1,176 +1,201 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Arsenal&display=swap"); */
 
 #faq .faq-container {
-    color: #707070;
+  color: #707070;
+}
 
-  }
-  
+#faq .faq-container .header {
+  margin-top: 160px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+#faq .faq-container .header .title {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #212529;
+  font-family: "Lora", serif;
+}
+
+#faq .faq-container .header .text {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#faq .faq-container .faq-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0px;
+}
+
+#faq .faq-container .faq-links li {
+  list-style: none;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+#faq .faq-container .faq-links li a {
+  font-size: 15px;
+  color: #707070;
+  -webkit-transition: font-size 1s;
+  transition: font-size 1s;
+  font-family: "Lora", serif;
+}
+
+#faq .faq-container .faq-links li a:hover {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#faq .faq-container .faq-links .active {
+  font-size: 30px;
+  font-weight: 500;
+  color: #212529;
+}
+
+#faq .faq-container .faq-content .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#faq .faq-container .faq-content .text .ques {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  text-align: center;
+  font-weight: 500;
+  color: #313131;
+  font-size: 15px;
+}
+
+#faq .faq-container .faq-content .text .arrow {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+
+#faq .faq-container .faq-content .text .arrow i {
+  font-size: 12px;
+}
+
+#faq .faq-container .faq-content .para {
+  font-size: 12px;
+  margin-bottom: 20px;
+  border-left: 2px solid #707070;
+  padding-left: 10px;
+}
+
+#faq .faq-container .faq-content .para br {
+  margin: 10px;
+}
+
+#faq .faq-form-container {
+  margin-top: 180px;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+#faq .faq-form-container .header {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: "Lora", serif;
+}
+
+#faq .faq-form-container .sub-header {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+#faq .faq-form-container .faq-form {
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  padding: 40px;
+}
+
+#faq .faq-form-container .faq-form .form-group {
+  margin-bottom: 40px;
+}
+
+#faq .faq-form-container .faq-form .form-group label {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+#faq .faq-form-container .faq-form .form-group .form-control {
+  height: calc(1em + 0.75rem + 2px);
+}
+
+#faq .faq-form-container .faq-form .form-group input,
+#faq .faq-form-container .faq-form .form-group textarea {
+  border: none;
+  border-bottom: 1px solid #707070;
+  border-radius: 0px;
+}
+
+#faq .faq-form-container .faq-form .form-group textarea:focus,
+#faq .faq-form-container .faq-form .form-group input:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#faq .faq-form-container .faq-form .form-btn {
+  text-align: right;
+}
+
+#faq .faq-form-container .faq-form .form-btn button {
+  color: white;
+  background-color: #76a0fc;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 7px;
+  border: none;
+}
+
+#faq .faq-form-container .faq-form .form-btn button:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
   #faq .faq-container .header {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 80px;
     text-align: center;
   }
-  
-  #faq .faq-container .header .title {
-    text-transform: uppercase;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #212529;
-  }
-  
-  #faq .faq-container .header .text {
-    font-size: 14px;
-  }
-  
   #faq .faq-container .faq-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-decoration: none;
-    padding: 0px;
+    margin-bottom: 60px;
   }
-  
-  #faq .faq-container .faq-links li {
-    list-style: none;
-    margin-bottom: 25px;
-    cursor: pointer;
-  }
-  
-  #faq .faq-container .faq-links li a {
-    font-size: 14px;
-    color: #707070;
-    -webkit-transition: font-size 1s;
-    transition: font-size 1s;
-  }
-  
-  #faq .faq-container .faq-links li a:hover {
-    text-decoration: none;
-    font-size: 25px;
-  }
-  
-  #faq .faq-container .faq-links .active {
-    font-size: 25px;
-    font-weight: 500;
-    color: #212529;
-  }
-  
-  #faq .faq-container .faq-content .text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  
-  #faq .faq-container .faq-content .text .ques {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    text-align: center;
-    font-weight: 500;
-  }
-  
-  #faq .faq-container .faq-content .text .arrow {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    text-align: right;
-  }
-  
-  #faq .faq-container .faq-content .text .arrow i {
-    font-size: 8px;
-  }
-  
-  #faq .faq-container .faq-content .para {
-    font-size: 12px;
-    margin-bottom: 20px;
-    border-left: 2px solid #707070;
-    padding-left: 10px;
-  }
-  
-  #faq .faq-container .faq-content .para br {
-    margin: 10px;
-  }
-  
   #faq .faq-form-container {
-    margin-top: 150px;
+    margin-top: 100px;
     margin-bottom: 50px;
     padding: 10px;
   }
-  
-  #faq .faq-form-container .header {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 10px;
-    font-weight: 800;
-  }
-  
-  #faq .faq-form-container .sub-header {
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  #faq .faq-form-container .faq-form {
-    -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-    margin-top: 40px;
-    padding: 40px;
-  }
-  
-  #faq .faq-form-container .faq-form .form-group {
-    margin-bottom: 40px;
-  }
-  
-  #faq .faq-form-container .faq-form .form-group label {
-    margin-bottom: 0px;
-    font-size: 14px;
-  }
-  
-  #faq .faq-form-container .faq-form .form-group .form-control {
-    height: calc(1em + .75rem + 2px);
-  }
-  
-  #faq .faq-form-container .faq-form .form-group input, #faq .faq-form-container .faq-form .form-group textarea {
-    border: none;
-    border-bottom: 1px solid #707070;
-    border-radius: 0px;
-  }
-  
-  #faq .faq-form-container .faq-form .form-group textarea:focus, #faq .faq-form-container .faq-form .form-group input:focus {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  
-  #faq .faq-form-container .faq-form .form-btn {
-    text-align: right;
-  }
-  
-  #faq .faq-form-container .faq-form .form-btn button {
-    color: white;
-    background-color: #76a0fc;
-    padding: 10px 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-radius: 7px;
-    border: none;
-  }
-  
-  #faq .faq-form-container .faq-form .form-btn button:hover {
-    text-decoration: none;
-  }
+}

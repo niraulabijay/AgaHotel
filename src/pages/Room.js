@@ -5,7 +5,7 @@ export default function Room() {
 	return (
 		<>
 			<SearchNavbar />
-			<div className="content">
+			<div className="room-content">
 				<div className="room-filter-page">
 					<div className="room-top-bar">
 						<div className="container">

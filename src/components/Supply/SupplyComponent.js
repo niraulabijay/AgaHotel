@@ -6,10 +6,9 @@ function SupplyComponent() {
       <div className="supply">
         <div className="header">Supply</div>
         <div className="sub-header">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-          pariatur assumenda nobis voluptatum deserunt sint error voluptates.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-          pariatur assumenda nobis voluptatum deserunt sint error voluptates!
+          We provide you all the essentials that your hotel requires. Our
+          essentials are of a high quality and at a very affordable rate. Easy
+          Shipping. Fast Delivery. 100% Satisfaction.
         </div>
 
         <div className="container">

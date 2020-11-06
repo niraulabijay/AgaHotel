@@ -11,16 +11,9 @@ export default function Welcome() {
           <div className="col-md-7">
             <div className="welcome-content">
               <div className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem, ratione possimus quia tempora obcaecati nihil
-                iste, eum voluptatum voluptates quam provident sequi temporibus
-                aliquam est, dolorum odio excepturi fuga in. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Exercitationem, ratione
-                possimus quia tempora obcaecati nihil iste, eum voluptatum
-                voluptates quam provident sequi temporibus aliquam est, dolorum
-                odio excepturi fuga in.possimus quia tempora obcaecati nihil
-                iste, eum voluptatum voluptates quam provident sequi temporibus
-                aliquam est, dolorum odio excepturi fuga in.
+              Welcome to AGA Hotels. We believe you deserve to have a memorable experience whether you are on a business trip or a  family vacation. 
+              We believe in providing an optimum level of customer service so you can feel like you are staying at home while receiving a 5-star treatment. 
+              We are a customer-centric Hotel Franchise whose sole purpose is to provide the experience that our customer will cherish.
               </div>
             </div>
           </div>

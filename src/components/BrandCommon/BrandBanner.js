@@ -45,13 +45,15 @@ export default function BrandBanner(props) {
       <div className="banner">
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
+            <div className="bars-call d-block d-lg-none">
+              {/* <i class="fas fa-phone-alt"></i> */}
+              {/* <i class="fas fa-phone-alt"></i> */}
+              <i class="fas fa-phone-volume"></i>
+            </div>
             <Link to="/" className="logo-container">
-              <img
-                src={brand ? brand.logo: ''}
-                className="img-fluid"
-                alt=""
-              />
+              <img src={brand ? brand.logo : ""} className="img-fluid" alt="" />
             </Link>
+
             <div className="primary-content">
               <ul className="first-navbar-wrapper">
                 <li>
@@ -110,8 +112,16 @@ export default function BrandBanner(props) {
                   alt=""
                 />
               </div>
+              <div className="overlay-container">
+                <div className="container">
+                  <div className="title">We Care About You</div>
+                  <div className="subtitle">
+                    Peace of mind and greater travel flexibility are yours with
+                    our extended cancellation policy.
+                  </div>
+                </div>
+              </div>
             </div>
-            
           </Slider>
         </div>
 

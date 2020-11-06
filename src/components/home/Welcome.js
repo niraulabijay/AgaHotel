@@ -15,14 +15,11 @@ export default function Welcome() {
 								<div className="welcome-content">
 									<div className="title">Our Heartfelt Thanks</div>
 									<div className="description">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Exercitationem, ratione possimus quia tempora obcaecati
-										nihil iste, eum voluptatum voluptates quam provident sequi
-										temporibus aliquam est, dolorum odio excepturi fuga in.
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Exercitationem, ratione possimus quia tempora obcaecati
-										nihil iste, eum voluptatum voluptates quam provident sequi
-										temporibus aliquam est, dolorum odio excepturi fuga in.
+									We would like to thank you from the bottom of our heart for choosing AGA Hotels. 
+									At AGA Hotels, we put our customer service above everything else. 
+									We believe in 100% Customer Satisfaction and help make our customer stay a memorable one. 
+									Our Staffs are dedicated to provide you a 5-star service while treating you like a family member.
+									Our Staffs are dedicated to provide you a 5-star service while treating you like a family member.
 									</div>
 								</div>
 							</div>

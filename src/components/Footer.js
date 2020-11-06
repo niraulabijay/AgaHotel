@@ -49,13 +49,19 @@ export default function Footer() {
 							</div>
 
 							<div className="col-md-2 col-lg-2">
-								<div className="title">Travel professionals</div>
+								<div className="title">Brands</div>
 								<ul>
 									<li>
-										<a href="">Partners</a>
+										<a href="">Aga Hotels</a>
 									</li>
 									<li>
-										<a href="">Travel Agents</a>
+										<a href="">Lyfe Inn</a>
+									</li>
+									<li>
+										<a href="">Hotel Blu</a>
+									</li>
+									<li>
+										<a href="">Earth Inn</a>
 									</li>
 								</ul>
 							</div>

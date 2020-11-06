@@ -11,10 +11,9 @@ function Welcome() {
                 <div class="header">Welcome</div>
                 <div className="line"></div>
                 <div class="text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-                  porro vel officiis repudiandae id, voluptates dolorum eos at a
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-                  porro vel officiis repudiandae id, voluptates dolorum eos at a
+                We welcome  you to the friendly neighborhood hotel Earth Inn. 
+                We provide you with very clean and comfortable rooms and make sure you get the best customer service. 
+                We believe in providing a 5-star service at an affordable price.
                 </div>
                 <div class="welcome-list">
                   <ul>

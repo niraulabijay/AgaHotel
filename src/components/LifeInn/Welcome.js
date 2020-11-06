@@ -19,8 +19,8 @@ function Welcome() {
             <div class="text-container">
               <div class="header">Welcome</div>
               <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-                porro vel officiis repudiandae id, voluptates dolorum eos at a
+              We welcome you to very comfortable Lyfe Inn hotels where you will receive
+              excellent customer service and make your stay memorable.
               </div>
               <div class="welcome-list">
                 <ul>

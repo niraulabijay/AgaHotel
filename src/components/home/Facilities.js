@@ -49,13 +49,9 @@ export default function Facilities() {
 						</div>
 						<div className="col-md-4">
 							<div className="description">
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
-								quod saepe laborum explicabo magni, commodi officia, magnam odit
-								provident quam, quae aliquid minus? Ipsam architecto consequatur
-								vel ullam sunt quo. Lorem, ipsum dolor sit amet consectetur
-								adipisicing elit. Culpa quod saepe laborum explicabo magni,
-								commodi officia, magnam odit provident quam, quae aliquid minus?
-								Ipsam architecto consequatur vel ullam sunt quo.
+							Aga Hotels is focused on giving you the best customer service to make your stay very memorable. 
+							On top of that, we also provide you with various deals, offers, and rewards. 
+							Please sign up with us today and we will send you some of the exclusive deals customized for you.
 							</div>
 						</div>
 						<div className="col-md-4">
