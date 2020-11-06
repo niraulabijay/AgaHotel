@@ -87,7 +87,6 @@ const DatePicker = (props) => {
                 showMonthAndYearPickers={false}
                 direction="horizontal"
                 minDate={new Date()}
-                maxDate={addDays(new Date(), 7)}
                 onChange={({ ...ranges }) => {
                   setFieldValue(
                     "selectionRange.startDate",

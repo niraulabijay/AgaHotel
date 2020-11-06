@@ -48,7 +48,7 @@ export default function Designed() {
 							<div>
 								<div className="designed-item">
 									<div className="img-container">
-										<img src={require('../../assets/images/slider 1.png')} alt="" />
+										<img src={require('../../assets/images/proximity.jpg')} alt="" />
 									</div>
 									<div className="title">Proximity</div>
 									<div className="description">
@@ -60,7 +60,7 @@ export default function Designed() {
 							<div>
 								<div className="designed-item">
 									<div className="img-container">
-										<img src={require('../../assets/images/slider 2.png')} alt="" />
+										<img src={require('../../assets/images/slider 3.png')} alt="" />
 									</div>
 									<div className="title">Bedrooms</div>
 									<div className="description">
@@ -73,7 +73,7 @@ export default function Designed() {
 							<div>
 								<div className="designed-item">
 									<div className="img-container">
-										<img src={require('../../assets/images/slider 3.png')} alt="" />
+										<img src={require('../../assets/images/gym1.jpg')} alt="" />
 									</div>
 									<div className="title">Workout Area</div>
 									<div className="description">
@@ -85,7 +85,7 @@ export default function Designed() {
 							<div>
 								<div className="designed-item">
 									<div className="img-container">
-										<img src={require('../../assets/images/slider 4.png')} alt="" />
+										<img src={require('../../assets/images/breakfast.jpg')} alt="" />
 									</div>
 									<div className="title">Balanced Breakfast</div>
 									<div className="description">
@@ -97,7 +97,7 @@ export default function Designed() {
 							<div>
 								<div className="designed-item">
 									<div className="img-container">
-										<img src={require('../../assets/images/slider 3.png')} alt="" />
+										<img src={require('../../assets/images/slider 2.png')} alt="" />
 									</div>
 									<div className="title">Swimming Pool</div>
 									<div className="description">

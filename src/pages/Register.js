@@ -17,7 +17,7 @@ export default function Register() {
             <div class="row justify-content-lg-center">
               <div class="col-lg-8">
                 <div class="register-form">
-                  <div class="form-header">Personal Information</div>
+                  <div class="form-header">Registration Form</div>
 
                   <RegisterForm />
                   

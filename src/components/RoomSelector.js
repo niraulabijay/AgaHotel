@@ -71,7 +71,7 @@ const RoomSelector = (props) => {
             <>
               <div class="option-content">
                 <div className="header">
-                  <div className="row room-content">
+                  <div className="row">
                     <div className="col-6">
                       <div>rooms</div>
                     </div>
@@ -115,7 +115,7 @@ const RoomSelector = (props) => {
                   return (
                     <div className="room-occupancy" key={room.id}>
                       <div className="sub-header">room {`0${index + 1}`}</div>
-                      <div className="row room-content">
+                      <div className="row ">
                         <div className="col-6">
                           <div className="number">
                             <div>

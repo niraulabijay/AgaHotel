@@ -79,7 +79,7 @@ export default function Franchise() {
         <div className="franchise-form-container">
           <div className="row">
             <div className="col-12 col-md-6 offset-md-3">
-              <div className="header">Leave us a Message</div>
+              <div className="header">Franchise Enquiry Form</div>
               <div className="sub-header">We would love to hear from you.</div>
               <div className="franchise-form">
                 <Formik
