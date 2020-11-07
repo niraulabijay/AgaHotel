@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -52,16 +53,16 @@ export default function Footer() {
 								<div className="title">Brands</div>
 								<ul>
 									<li>
-										<a href="">Aga Hotels</a>
+										<Link to="/brand/aga-hotel">Aga Hotels</Link>
 									</li>
 									<li>
-										<a href="">Lyfe Inn</a>
+										<Link to="/brand/lyfe-inn">Lyfe Inn</Link>
 									</li>
 									<li>
-										<a href="">Hotel Blu</a>
+										<Link to="/brand/hotel-blu">Hotel Blu</Link>
 									</li>
 									<li>
-										<a href="">Earth Inn</a>
+										<Link to="/brand/erth-inn">Earth Inn</Link>
 									</li>
 								</ul>
 							</div>
