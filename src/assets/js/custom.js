@@ -176,3 +176,20 @@ function closeHotelNav() {
 
 // custom 
 
+
+//   useEffect(() => {
+//     var navbar = document.getElementById("searchBar");
+//     window.onscroll = function () {
+//       if (navbar != null) {
+//         scrollFunction();
+//       }
+//     };
+//     var sticky = navbar.offsetTop + 35;
+//     function scrollFunction() {
+//       if (window.pageYOffset >= sticky) {
+//         navbar.classList.add("sticky");
+//       } else {
+//         navbar.classList.remove("sticky");
+//       }
+//     }
+//   }, []);

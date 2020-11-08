@@ -10,29 +10,39 @@ export default function Banner() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   useEffect(() => {
-    var navbar = document.getElementById("searchBar");
+    var navbar = document.querySelector(".navbar-wrapper");
+    var firstNavbar = document.querySelector(".first-navbar-wrapper")
+    var bookingBtn = document.querySelector(".booking-btn");
     window.onscroll = function () {
       if (navbar != null) {
         scrollFunction();
       }
     };
-    var sticky = navbar.offsetTop + 35;
+    var sticky = navbar.offsetTop + 5;
     function scrollFunction() {
       if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky");
+        firstNavbar.style.display ="none"
+        bookingBtn.style.background = "#ff9800";
+
       } else {
         navbar.classList.remove("sticky");
+        firstNavbar.style.display = "flex";
+         bookingBtn.style.background = "none";
       }
     }
   }, []);
+
+
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
 
   return (
     <>
-      <div className="banner">
+      <div className="banner" id='topbanner'>
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
             <div className="bars-call d-block d-lg-none">
@@ -87,6 +97,9 @@ export default function Banner() {
                 </li>
                 <li>
                   <Link to="/register">Join Us</Link>
+                </li>
+                <li>
+                  <a className="booking-btn" href="#topbanner">Book Now</a>
                 </li>
               </ul>
             </div>

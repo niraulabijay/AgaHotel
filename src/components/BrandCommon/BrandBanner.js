@@ -19,22 +19,29 @@ const settings = {
 export default function BrandBanner(props) {
   const {brand, banner} = props
   
-  useEffect(() => {
-    var navbar = document.getElementById("searchBar");
-    window.onscroll = function () {
-      if (navbar != null) {
-        scrollFunction();
-      }
-    };
-    var sticky = navbar.offsetTop + 35;
-    function scrollFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
+useEffect(() => {
+  var navbar = document.querySelector(".navbar-wrapper");
+  var firstNavbar = document.querySelector(".first-navbar-wrapper");
+  var bookingBtn = document.querySelector(".booking-btn");
+  window.onscroll = function () {
+    if (navbar != null) {
+      scrollFunction();
     }
-  }, []);
+  };
+  var sticky = navbar.offsetTop + 5;
+  function scrollFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky");
+      firstNavbar.style.display = "none";
+      bookingBtn.style.background = "#ff9800";
+    } else {
+      navbar.classList.remove("sticky");
+      firstNavbar.style.display = "flex";
+      bookingBtn.style.background = "none";
+    }
+  }
+}, []);
+
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
@@ -42,7 +49,7 @@ export default function BrandBanner(props) {
 
   return (
     <>
-      <div className="banner">
+      <div className="banner" id="topbanner">
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
             <div className="bars-call d-block d-lg-none">
@@ -77,25 +84,30 @@ export default function BrandBanner(props) {
                 </li>
               </ul>
               <ul className="second-navbar-wrapper">
-              <li>
-									<NavLink to="/deal" >Deals</NavLink>
-								</li>
+                <li>
+                  <NavLink to="/deal">Deals</NavLink>
+                </li>
 
-								<li>
-									<NavLink to="/about">About</NavLink>
-								</li>
-								<li>
-									<NavLink to="/supply">Supply</NavLink>
-								</li>
-								<li>
-									<NavLink to="/franchise">Franchise</NavLink>
-								</li>
-								<li>
-									<Link to="/register">Join Us</Link>
-								</li>
+                <li>
+                  <NavLink to="/about">About</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/supply">Supply</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/franchise">Franchise</NavLink>
+                </li>
+                <li>
+                  <Link to="/register">Join Us</Link>
+                </li>
+                <li>
+                  <a className="booking-btn" href="#topbanner">
+                    Booking
+                  </a>
+                </li>
               </ul>
             </div>
-            <div className="bars d-block d-md-none">
+            <div className="bars d-block d-lg-none">
               <span onClick={openNav}>
                 <i className="fa fa-bars"></i>
               </span>
@@ -112,7 +124,7 @@ export default function BrandBanner(props) {
                   alt=""
                 />
               </div>
-              <div className="overlay-container">
+              <div className={"overlay-container" + " " + (brand.slug == "aga-hotel" ? "agaoverlay" : "" )}>
                 <div className="container">
                   <div className="title">We Care About You</div>
                   <div className="subtitle">
