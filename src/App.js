@@ -30,7 +30,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/about">
-          <About />
+            <About />
           </Route>
           {/* <Route exact path="/brand">
             <Brand />

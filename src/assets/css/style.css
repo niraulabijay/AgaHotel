@@ -814,6 +814,11 @@ a:hover {
   font-size: 14px;
 }
 
+.banner .slider .agaoverlay {
+  background: #0000005e;
+  bottom: -190px;
+}
+
 .banner .navbar-wrapper {
   position: absolute;
   top: 0;
@@ -2614,11 +2619,11 @@ a:hover {
 }
 
 .about-content .about-text {
-  padding: 20% 10% 0;
+  padding: 0 50px;
 }
 
 .about-content .about-text .header {
-  font-size: 90px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 128px;
   font-family: "Lora", serif;
@@ -2630,10 +2635,11 @@ a:hover {
   line-height: 31px;
   font-weight: 400;
   padding-bottom: 20px;
+  text-align: justify;
 }
 
 .about-content .about-banner {
-  height: 600px;
+  height: 400px;
 }
 
 .about-content .about-banner img {
@@ -2837,7 +2843,7 @@ a:hover {
 }
 
 .overview .title {
-  font-size: 90px;
+  font-size: 40px;
   color: #000;
   letter-spacing: 1px;
   margin-bottom: 30px;
@@ -2851,11 +2857,11 @@ a:hover {
 }
 
 .overview .overview-content {
-  padding: 70px 100px 0px;
+  padding: 0px 50px;
 }
 
 .overview .img-container {
-  height: 550px;
+  height: 400px;
   overflow: hidden;
 }
 

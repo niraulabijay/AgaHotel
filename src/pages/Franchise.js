@@ -5,7 +5,7 @@ import "../assets/css/franchise.css";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import FixedNavbar from "../components/FixedNavbar";
-import RegisterBanner from "../components/Franchise/FranchiseBanner";
+import FranchiseBanner from "../components/Franchise/FranchiseBanner";
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 const initialValue = {
   name: "",
@@ -32,7 +32,7 @@ export default function Franchise() {
       <div className="fixed-navbar">
         <FixedNavbar />
       </div>
-      <RegisterBanner />
+      <FranchiseBanner />
       <div className="franchise-content">
         <div className="franchise-welcome">
           <div className="container">
