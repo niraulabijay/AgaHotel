@@ -84,9 +84,6 @@ useEffect(() => {
                 </li>
               </ul>
               <ul className="second-navbar-wrapper">
-                <li>
-                  <NavLink to="/deal">Deals</NavLink>
-                </li>
 
                 <li>
                   <NavLink to="/about">About</NavLink>

@@ -37,11 +37,11 @@ function BrandGlobal() {
 
   return (
     <div>
-      {brand && brand.brand.slug == "lifeinn" ? (
+      {brand && brand.brand.slug == "lyfe-inn" ? (
         <LyfeBrand data={brand} />
       ) : brand && brand.brand.slug === "hotel-blu" ? (
         <HotelBluBrand data={brand} />
-      ) : brand && brand.brand.slug === "earth-inn" ? (
+      ) : brand && brand.brand.slug === "erth-inn" ? (
         <EarthBrand data={brand} />
       ) : brand && brand.brand.slug === "aga-hotel" ? (
         <AgaBrand data={brand} />

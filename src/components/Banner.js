@@ -79,10 +79,10 @@ export default function Banner() {
                 </li>
               </ul>
               <ul className="second-navbar-wrapper">
-                {/* <li>
-                  <NavLink to="/deal">Deals</NavLink>
-                </li> */}
-
+                
+                <li>
+                  <a href="#brandSection">Brands</a>
+                </li>
                 <li>
                   <NavLink to="/about">About</NavLink>
                 </li>
@@ -91,9 +91,6 @@ export default function Banner() {
                 </li>
                 <li>
                   <NavLink to="/franchise">Franchise</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/faq">FAQ</NavLink>
                 </li>
                 <li>
                   <Link to="/register">Join Us</Link>
