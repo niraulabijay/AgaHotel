@@ -42,7 +42,7 @@ export default function Banner() {
 
   return (
     <>
-      <div className="banner" id='topbanner'>
+      <div className="banner" id="topbanner">
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
             <div className="bars-call d-block d-lg-none">
@@ -59,7 +59,7 @@ export default function Banner() {
             <div className="primary-content">
               <ul className="first-navbar-wrapper">
                 <li>
-                  <i className="fa fa-phone"></i>
+                  <i class="fas fa-phone-alt"></i>
                   <select name="" id="">
                     <option value="">+1 (415) - 555 2671 </option>
                     <option value="">+1 (415) - 554 2661 </option>
@@ -79,7 +79,6 @@ export default function Banner() {
                 </li>
               </ul>
               <ul className="second-navbar-wrapper">
-                
                 <li>
                   <a href="#brandSection">Brands</a>
                 </li>
@@ -96,7 +95,9 @@ export default function Banner() {
                   <Link to="/register">Join Us</Link>
                 </li>
                 <li>
-                  <a className="booking-btn" href="#topbanner">Book Now</a>
+                  <a className="booking-btn" href="#topbanner">
+                    Book Now
+                  </a>
                 </li>
               </ul>
             </div>

@@ -124,13 +124,6 @@ function AboutContent() {
                   />
                 </div>
                 <div className="name">Customer Satisfaction</div>
-                <div className="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid alias laboriosam nesciunt exercitationem, quis saepe
-                  enim dignissimos pariatur excepturi asperiores debitis
-                  quibusdam fuga commodi, omnis temporibus optio dolore unde
-                  iure.
-                </div>
               </div>
             </div>
             <div className="col-md-4">
@@ -143,13 +136,6 @@ function AboutContent() {
                   />
                 </div>
                 <div className="name">Maintain Quality Standard</div>
-                <div className="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid alias laboriosam nesciunt exercitationem, quis saepe
-                  enim dignissimos pariatur excepturi asperiores debitis
-                  quibusdam fuga commodi, omnis temporibus optio dolore unde
-                  iure.
-                </div>
               </div>
             </div>
             <div className="col-md-4">
@@ -162,13 +148,6 @@ function AboutContent() {
                   />
                 </div>
                 <div className="name">Create Enduring Relationships</div>
-                <div className="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid alias laboriosam nesciunt exercitationem, quis saepe
-                  enim dignissimos pariatur excepturi asperiores debitis
-                  quibusdam fuga commodi, omnis temporibus optio dolore unde
-                  iure.
-                </div>
               </div>
             </div>
           </div>

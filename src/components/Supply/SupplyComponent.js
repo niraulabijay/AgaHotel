@@ -5,6 +5,9 @@ function SupplyComponent() {
     <>
       <div className="supply">
         <div className="header">Supply</div>
+        <div className="coming-soon">
+          Coming soon...
+        </div>
         <div className="sub-header">
           We provide you all the essentials that your hotel requires. Our
           essentials are of a high quality and at a very affordable rate. Easy

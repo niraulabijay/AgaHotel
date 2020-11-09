@@ -67,7 +67,7 @@ export default function Footer() {
                   <a href="">New and Upcomming hotels</a>
                 </li>
                 <li>
-                  <a href="">Aga Hotels App</a>
+                  <a href="">AGA Hotels App</a>
                 </li>
                 <li>
                   <a href="">Responsible Business</a>

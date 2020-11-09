@@ -64,7 +64,7 @@ useEffect(() => {
             <div className="primary-content">
               <ul className="first-navbar-wrapper">
                 <li>
-                  <i className="fa fa-phone"></i>
+                  <i class="fas fa-phone-alt"></i>
                   <select name="" id="">
                     <option value="">+1 (415) - 555 2671 </option>
                     <option value="">+1 (415) - 554 2661 </option>
@@ -84,7 +84,6 @@ useEffect(() => {
                 </li>
               </ul>
               <ul className="second-navbar-wrapper">
-
                 <li>
                   <NavLink to="/about">About</NavLink>
                 </li>
@@ -121,7 +120,13 @@ useEffect(() => {
                   alt=""
                 />
               </div>
-              <div className={"overlay-container" + " " + (brand.slug == "aga-hotel" ? "agaoverlay" : "" )}>
+              <div
+                className={
+                  "overlay-container" +
+                  " " +
+                  (brand.slug == "aga-hotel" ? "agaoverlay" : "")
+                }
+              >
                 <div className="container">
                   <div className="title">We Care About You</div>
                   <div className="subtitle">

@@ -49,7 +49,7 @@ export default function Facilities() {
 						</div>
 						<div className="col-md-4">
 							<div className="description">
-							Aga Hotels is focused on giving you the best customer service to make your stay very memorable. 
+							AGA Hotels is focused on giving you the best customer service to make your stay very memorable. 
 							On top of that, we also provide you with various deals, offers, and rewards. 
 							Please sign up with us today and we will send you some of the exclusive deals customized for you.
 							</div>

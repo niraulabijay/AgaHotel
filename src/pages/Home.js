@@ -17,7 +17,7 @@ export default function Home() {
         <div className="container">
           <div className="item-container">
             <div className="item-wrapper">
-              <div className="title">Contact Aga Hotels</div>
+              <div className="title">Contact AGA Hotels</div>
               <div className="button-container">
                 <a href="" className="mybtn">
                   Need Help?
