@@ -4628,4 +4628,10 @@ a:hover {
 .destination-select div div:nth-child(1) div div {
   height: 20px !important;
 }
+
+@media (max-width: 992px) {
+  .destination-select {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

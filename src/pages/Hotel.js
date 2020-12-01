@@ -50,9 +50,9 @@ export default function Hotel() {
       <div className="content">
         <div className="hotel-filter-page">
           <div className="container">
-            <div className="top-title">
+            {/* <div className="top-title">
               <span>56</span> Hotels found in Los Angeles.
-            </div>
+            </div> */}
             <div className="filter">
               <a href="" className="closebtn" onclick={openHotelNav}>
                 <i className="fa fa-filter"></i> Filter

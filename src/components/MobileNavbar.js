@@ -16,7 +16,7 @@ export default function MobileNavbar() {
         <Link to="/supply">Supply</Link>
         <Link to="/franchise">Franchise</Link>
         <Link to="/faq">FAQ</Link>
-        <Link to="/brand/aga-hotel">Brands</Link>
+        <Link to="/contact">Contact</Link>
       </div>
     </>
   );

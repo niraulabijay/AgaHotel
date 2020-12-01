@@ -1,12 +1,36 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import FormikControl from "./FormikComponent/FormikControl";
+import axiosInstance from "../helpers/axios";
+import { useHistory } from "react-router-dom";
+import $ from "jquery";
 
 function WhereTo(props) {
-	const { initialValues, validationSchema } = props;
+  const { initialValues, validationSchema } = props;
+  let history = useHistory();
+
+  const onSubmit = (data) => {
+    let newVar = { destination_id: data.destination.value };
+
+    axiosInstance
+      .post("/booking/hotels", { destination_id: data.destination.value })
+      //  then(res=>   console.log(res.data))
+      .then((res) => {
+        history.push(`/hotel/${res.data.destination_id}`);
+        $(".modal-backdrop").remove();
+        $("body").removeClass("modal-open");
+        $("#myModal .close").click(); 
+      })
+
+      .catch((err) => console.log(err, "error"));
+  };
   return (
     <>
-      <Formik initialValues={initialValues} validationSchema={validationSchema}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={onSubmit}
+        validationSchema={validationSchema}
+      >
         <Form className="container">
           <div
             className="bottom-search-bar-mobile d-flex d-lg-none"
@@ -30,13 +54,6 @@ function WhereTo(props) {
 
                 <div className="modal-body">
                   <div className="bottom-search-bar">
-                    {/* <div className="item">
-                      <span>
-                        <i className="fa fa-search"></i>
-                      </span>
-                      <Field type="text" placeholder="Los Angeles" />
-                      <div className="item-sup">Destination</div>
-                    </div> */}
                     <div className="item">
                       <FormikControl control="destination" name="destination" />
                       <div className="item-sup">Destination</div>
@@ -53,23 +70,8 @@ function WhereTo(props) {
                           control="date"
                           type="text"
                           name="selectionRange"
-                          //   startDate={initialValues.selectionRange.startDate}
-                          //   endDate={initialValues.selectionRange.endDate}
                         />
                       </div>
-                      {/* <div className="mobile-checkdate">
-                        <span>
-                          <i className="fa fa-calendar"></i>
-                        </span>
-                        <input type="date" placeholder="Find a Hotel" />
-                        <input type="date" placeholder="Find a Hotel" />
-                      </div> */}
-                      {/* <div className="item-sup" id="mobile-check-title">
-                        <div className="row">
-                          <div className="col-6">Check-in</div>
-                          <div className="col-6">Check-out</div>
-                        </div>
-                      </div> */}
                     </div>
 
                     <div className="item">
@@ -81,7 +83,7 @@ function WhereTo(props) {
                     </div>
 
                     <div className="button-container">
-                      <button>Search</button>
+                      <button type="submit">Search</button>
                     </div>
                   </div>
                 </div>

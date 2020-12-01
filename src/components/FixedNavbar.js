@@ -30,9 +30,6 @@ export default function FixedNavbar() {
                   <option value="">+1 (415) - 554 2661</option>
                 </select>
               </li>
-              <li>
-                <Link to="/faq">FAQ</Link>
-              </li>
             </ul>
             <ul className="second-navbar-wrapper">
               <li>
