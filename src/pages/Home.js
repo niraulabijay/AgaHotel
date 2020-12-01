@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom"
 import Banner from "../components/Banner";
 import Designed from "../components/home/Designed";
@@ -7,6 +7,9 @@ import Welcome from "../components/home/Welcome";
 import BrandSection from "../components/home/BrandSection";
 
 export default function Home() {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <>
       <Banner />

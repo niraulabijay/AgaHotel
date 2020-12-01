@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import Footer from "../components/Footer";
 import SearchNavbar from "../components/SearchNavbar";
 import "../assets/css/franchise.css";
@@ -27,6 +27,9 @@ const onSubmit = (data) => {
   console.log(data);
 };
 export default function Franchise() {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <>
       <div className="fixed-navbar">

@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect} from "react";
 import Banner from "../components/Banner";
 import BrandContact from "../components/brand/BrandContact";
 import BrandExperience from "../components/brand/BrandExperience";
@@ -7,6 +7,9 @@ import BrandRoom from "../components/brand/BrandRoom";
 import BrandWelcome from "../components/brand/BrandWelcome";
 
 export default function Brand() {
+	useEffect(()=>{
+		window.scrollTo(0, 0);
+	  },[])
 	return (
 		<>
 			<Banner />
