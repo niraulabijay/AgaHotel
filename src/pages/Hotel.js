@@ -9,7 +9,12 @@ import Axios from "axios";
 export default function Hotel() {
   let param = useParams();
   const [hotel, setHotel] = useState();
+  const scrollTop = () =>{
+    window.scrollTo(0, 0);
+    console.log('scroll')
+  }
   useEffect(() => {
+   scrollTop();
     let source = Axios.CancelToken.source();
     const loadData = async () => {
       try {
@@ -29,7 +34,7 @@ export default function Hotel() {
       };
     };
     loadData();
-  }, []);
+  }, [param.destination_id]);
 
   function openHotelNav(e) {
     e.preventDefault();
@@ -71,9 +76,9 @@ export default function Hotel() {
             <div className="item-wrapper">
               <div className="title">Contact Aga Hotels</div>
               <div className="button-container">
-                <a href="" className="mybtn">
+              <Link to="/contact" className="mybtn">
                   Need Help?
-                </a>
+                </Link>
               </div>
             </div>
           </div>

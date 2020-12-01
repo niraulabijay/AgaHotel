@@ -32,8 +32,10 @@ export default function SearchNavField() {
     let newVar = {destination_id : data.destination.value};
    
      axiosInstance.post('/booking/hotels', {destination_id : data.destination.value}).
-     then(res=>   history.push(`/hotel/${res.data.hotels[0].id}`)   
-     )
+    //  then(res=>   console.log(res.data))   
+     then(res=>   history.push(`/hotel/${res.data.destination_id}`)   )
+
+     
      .catch(err => console.log(err, 'error'));
   };
 

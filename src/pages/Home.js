@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import Banner from "../components/Banner";
 import Designed from "../components/home/Designed";
 import Facilities from "../components/home/Facilities";
@@ -19,9 +20,9 @@ export default function Home() {
             <div className="item-wrapper">
               <div className="title">Contact AGA Hotels</div>
               <div className="button-container">
-                <a href="" className="mybtn">
+              <Link to="/contact" className="mybtn">
                   Need Help?
-                </a>
+                </Link>
               </div>
             </div>
           </div>
