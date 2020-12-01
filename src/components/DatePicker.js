@@ -3,14 +3,12 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker, DateRange } from "react-date-range";
 import { Field, ErrorMessage, setFieldValue } from "formik";
-import {addDays, format, set} from 'date-fns'
+import { addDays, format, set } from "date-fns";
 
 const DatePicker = (props) => {
-
   const { label, name, startDate, endDate, ...rest } = props;
   const [open, setOpen] = useState(false);
   const node = useRef();
-  
 
   const handleClick = (e) => {
     if (node.current.contains(e.target)) {

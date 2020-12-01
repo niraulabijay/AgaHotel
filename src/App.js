@@ -17,7 +17,7 @@ import EarthBrand from "./pages/EarthInn/EarthBrand";
 import Supply from "./pages/Supply/Supply";
 import BrandGlobal from "./pages/Brand/BrandGlobal";
 import Franchise from "./pages/Franchise";
-
+import ContactUs from "./pages/ContactUs";
 
 
 function App() {
@@ -32,9 +32,9 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-          {/* <Route exact path="/brand">
-            <Brand />
-          </Route> */}
+          <Route exact path="/contact">
+           <ContactUs />
+          </Route>
           <Route exact path="/hotel">
             <Hotel />
           </Route>

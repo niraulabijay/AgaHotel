@@ -2,7 +2,7 @@ import React from "react";
 import BrandBanner from "../../components/BrandCommon/BrandBanner";
 import Welcome from "../../components/HotelBlu/Welcome";
 import WeProvide from "../../components/HotelBlu/WeProvide";
-import BrandContact from "../../components/brand/BrandContact";
+import BrandContact from "../../components/BrandCommon/BrandContact";
 import Experience from "../../components/HotelBlu/Experience";
 import Room from "../../components/BrandCommon/Room";
 

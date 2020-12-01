@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import {
   Formik,
   Field,
@@ -25,8 +25,12 @@ export default function SearchNavField() {
   const [showRoom, setShowRoom] = useState(false);
   const [adultNumber, setAdultNumber] = useState(0);
 
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   const initialValues = {
-    destination: "",
+    destination: { value: "", label: "" },
     checkIn: "",
     occupancy: [{ adult: 1, child: 0, id: "" + Math.random() }],
     specialRate: "",
@@ -36,6 +40,8 @@ export default function SearchNavField() {
       key: "selection",
     },
   };
+  const [destination, setDestination] = useState({});
+
   const openMobileDateBar = (e) => {
     e.preventDefault();
     document.getElementById("mobileDateBar").style.width = "100%";
@@ -88,25 +94,23 @@ export default function SearchNavField() {
     <div className="search-wrapper" id="searchBar">
       <Formik
         initialValues={initialValues}
-        onSubmit={(data, { setSubmitting }) => {
-          console.log(data);
-          setSubmitting(true);
-          setSubmitting(false);
-        }}
+        onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
         {(formik) => (
           <Form className="container">
             <div className="bottom-search-bar d-none d-lg-flex">
               <div className="item">
-                <span className="search-logo">
+                {/* <span className="search-logo">
                   <i className="fa fa-search"></i>
-                </span>
-                <Field
+                </span> */}
+                {/* <Field
                   type="text"
                   placeholder="Los Angeles"
                   name="destination"
-                />
+                /> */}
+                <FormikControl control="destination" name="destination" />
+
                 <div className="item-sup">Destination</div>
                 {/* <span><ErrorMessage name="destination" /></span> */}
               </div>
@@ -144,7 +148,7 @@ export default function SearchNavField() {
         )}
       </Formik>
 
-     <WhereTo />
+      <WhereTo />
     </div>
   );
 }

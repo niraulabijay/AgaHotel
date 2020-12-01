@@ -33,7 +33,7 @@ function BrandGlobal() {
       };
     };
     loadData();
-  }, [brandName]);
+  }, [slug]);
 
   return (
     <div>
