@@ -76,12 +76,12 @@ useEffect(() => {
                 <li>
                   <a href="">FAQ</a>
                 </li>
-                <li>
+                {/* <li>
                   <select name="" id="">
                     <option value="">English</option>
                     <option value="">German</option>
                   </select>
-                </li>
+                </li> */}
               </ul>
               <ul className="second-navbar-wrapper">
                 <li>
@@ -94,7 +94,7 @@ useEffect(() => {
                   <NavLink to="/franchise">Franchise</NavLink>
                 </li>
                 <li>
-                  <Link to="/register">Join Us</Link>
+                  <Link to="/">Contact Us</Link>
                 </li>
                 <li>
                   <a className="booking-btn" href="#topbanner">

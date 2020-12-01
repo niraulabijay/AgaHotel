@@ -451,9 +451,9 @@ a:hover{
       }
     }
   }
-  .item:hover {
-    background-color: gainsboro;
-  }
+  // .item:hover {
+  //   background-color: gainsboro;
+  // }
   .item-calender {
     display: flex;
     justify-content: space-between;
@@ -3928,7 +3928,7 @@ a:hover{
     z-index: 2;
   }
   .service_banner_background_image {
-    background-image: url(../images/registerbanner.jpg);
+    background-image: url(../images/hotel1.jpg);
     position: absolute;
     height: 100%;
     top: 0;
@@ -4013,3 +4013,33 @@ a:hover{
     }
   }
 }
+
+//destination -select
+
+.destination-select{
+ width: 180px;
+ .css-yk16xz-control{
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  border-radius: 0;
+  min-height: 24px;
+ }
+ .css-11csxmd-control{
+   min-height: 24px;
+ }
+ .css-1pahdxg-control{
+   border: 0;
+   box-shadow: none;
+   border-bottom: 1px solid #000;
+   border-radius: 0;
+     min-height: 24px;
+ }
+  .css-1pahdxg-control:hover{
+     border: 0;
+   box-shadow: none;
+   border-bottom: 1px solid #000;
+   border-radius: 0;
+     min-height: 24px;
+ }
+}
+
