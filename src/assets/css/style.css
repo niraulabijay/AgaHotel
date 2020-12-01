@@ -495,12 +495,7 @@ a:hover {
 }
 
 .search-wrapper .mobile-checkdate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 100%;
 }
 
 .search-wrapper .mobile-checkdate .checkdate-wrapper {

@@ -101,16 +101,7 @@ export default function SearchNavField() {
           <Form className="container">
             <div className="bottom-search-bar d-none d-lg-flex">
               <div className="item">
-                {/* <span className="search-logo">
-                  <i className="fa fa-search"></i>
-                </span> */}
-                {/* <Field
-                  type="text"
-                  placeholder="Los Angeles"
-                  name="destination"
-                /> */}
                 <FormikControl control="destination" name="destination" />
-
                 <div className="item-sup">Destination</div>
                 {/* <span><ErrorMessage name="destination" /></span> */}
               </div>
@@ -148,7 +139,10 @@ export default function SearchNavField() {
         )}
       </Formik>
 
-      <WhereTo />
+      <WhereTo
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+      />
     </div>
   );
 }

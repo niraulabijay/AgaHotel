@@ -53,7 +53,7 @@ const Destination = (props) => {
           console.log(values.destination.label);
           return (
             <>
-              <div className="destination-select">
+              <div className="destination-select ">
                 <Select
                   options={destinationOption}
                   placeholder="Search Destination"
