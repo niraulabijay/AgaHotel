@@ -2,7 +2,6 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 export default function FixedNavbar() {
-
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
@@ -10,7 +9,7 @@ export default function FixedNavbar() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
-  
+
   return (
     <>
       <div className="navbar-wrapper">
@@ -32,17 +31,8 @@ export default function FixedNavbar() {
                 </select>
               </li>
               <li>
-                <a href="">Bookings</a>
+                <Link to="/faq">FAQ</Link>
               </li>
-              <li>
-                <a href="">FAQ</a>
-              </li>
-              {/* <li>
-                <select name="" id="">
-                  <option value="">English</option>
-                  <option value="">German</option>
-                </select>
-              </li> */}
             </ul>
             <ul className="second-navbar-wrapper">
               <li>
@@ -55,7 +45,7 @@ export default function FixedNavbar() {
                 <NavLink to="/franchise">Franchise</NavLink>
               </li>
               <li>
-                <Link to="/">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>

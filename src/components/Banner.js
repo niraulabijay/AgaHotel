@@ -13,7 +13,7 @@ export default function Banner() {
 
   useEffect(() => {
     var navbar = document.querySelector(".navbar-wrapper");
-    var firstNavbar = document.querySelector(".first-navbar-wrapper")
+    var firstNavbar = document.querySelector(".first-navbar-wrapper");
     var bookingBtn = document.querySelector(".booking-btn");
     window.onscroll = function () {
       if (navbar != null) {
@@ -24,17 +24,15 @@ export default function Banner() {
     function scrollFunction() {
       if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky");
-        firstNavbar.style.display ="none"
+        firstNavbar.style.display = "none";
         bookingBtn.style.background = "#ff9800";
-
       } else {
         navbar.classList.remove("sticky");
         firstNavbar.style.display = "flex";
-         bookingBtn.style.background = "none";
+        bookingBtn.style.background = "none";
       }
     }
   }, []);
-
 
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -65,18 +63,10 @@ export default function Banner() {
                     <option value="">+1 (415) - 554 2661 </option>
                   </select>
                 </li>
-                <li>
-                  <a href="">Bookings</a>
-                </li>
+
                 <li>
                   <Link to="/faq">FAQ</Link>
                 </li>
-                {/* <li>
-                  <select name="" id="">
-                    <option value="">English</option>
-                    <option value="">German</option>
-                  </select>
-                </li> */}
               </ul>
               <ul className="second-navbar-wrapper">
                 <li>
@@ -92,7 +82,7 @@ export default function Banner() {
                   <NavLink to="/franchise">Franchise</NavLink>
                 </li>
                 <li>
-                  <Link to="/">Contact Us</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
                 <li>
                   <a className="booking-btn" href="#topbanner">

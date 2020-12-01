@@ -118,6 +118,9 @@
   margin-bottom: 50px;
   padding: 10px;
 }
+#faq .contact-form {
+  margin-top: -100px;
+}
 
 #faq .faq-form-container .header {
   text-align: center;

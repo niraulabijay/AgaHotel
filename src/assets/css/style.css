@@ -1481,8 +1481,13 @@ a:hover {
   margin-top: 15px;
   list-style: none;
   padding-left: 0;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top-footer .social-link li {
+  margin: 10px;
 }
 
 .top-footer .social-link a {
@@ -1564,8 +1569,16 @@ a:hover {
   margin-top: 15px;
   list-style: none;
   padding-left: 0;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .social-link li {
+  margin-right: 20px;
 }
 
 .footer .social-link a {
@@ -3143,6 +3156,7 @@ a:hover {
   border-bottom: 1px solid gray;
   font-weight: lighter;
   font-family: "Arsenal", sans-serif;
+  min-height: 143px;
 }
 
 .room .room-wrapper .price-wrap {
@@ -3165,6 +3179,10 @@ a:hover {
 .room .room-wrapper .price-wrap .price {
   font-weight: bold;
   font-size: 18px;
+}
+
+.room .room-wrapper .price-wrap .price sup {
+  color: red;
 }
 
 .room .room-wrapper .book-btn {
@@ -3301,6 +3319,12 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .room .room-wrapper .description {
+    min-height: auto;
+  }
+}
+
 .location-container {
   margin-bottom: 140px;
 }
@@ -3323,6 +3347,10 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-image: url("../images/earthini.jpg");
+}
+
+.location-container .brand-location .location-image2 {
+  background-image: url("../images/earthinc.jpg");
 }
 
 .location-container .brand-location .text-container {
@@ -4584,5 +4612,22 @@ a:hover {
   border-bottom: 1px solid #000;
   border-radius: 0;
   min-height: 24px;
+}
+
+.destination-select div div {
+  min-height: 10px !important;
+  height: 25px !important;
+}
+
+.destination-select div div div:first-child div {
+  top: 50% !important;
+}
+
+.destination-select div div div:last-child {
+  padding: 1px 5px;
+}
+
+.destination-select div div div:last-child div {
+  height: 25px !important;
 }
 /*# sourceMappingURL=style.css.map */

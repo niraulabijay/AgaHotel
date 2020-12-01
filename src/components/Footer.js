@@ -4,7 +4,6 @@ import Axios from "axios";
 import axiosInstance from "../helpers/axios";
 
 export default function Footer() {
-
   const [brands, setBrands] = useState([]);
 
   useEffect(() => {
@@ -48,29 +47,20 @@ export default function Footer() {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-2 col-md-2">
+            <div className="col-lg-3 col-md-2">
               <div className="title">Quick Links</div>
               <ul>
                 <li>
-                  <a href="">Best Online Rate Guranteed</a>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <a href="">Covid-19 update</a>
+                  <Link to="/supply">Supply</Link>
                 </li>
                 <li>
-                  <a href="">Destination</a>
+                  <Link to="/franchise">Franchise</Link>
                 </li>
                 <li>
-                  <a href="">Gift cards</a>
-                </li>
-                <li>
-                  <a href="">New and Upcomming hotels</a>
-                </li>
-                <li>
-                  <a href="">AGA Hotels App</a>
-                </li>
-                <li>
-                  <a href="">Responsible Business</a>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -80,7 +70,7 @@ export default function Footer() {
               <ul>
                 {brands.map((brand) => (
                   <li>
-                    <Link to={"brand/"+brand.slug}>{brand.title}</Link>
+                    <Link to={"/brand/" + brand.slug}>{brand.title}</Link>
                   </li>
                 ))}
               </ul>
@@ -89,33 +79,10 @@ export default function Footer() {
               <div className="title">Corporate</div>
               <ul>
                 <li>
-                  <a href="">Careers PPHE</a>
+                  <Link to="/">Terms & Conditions</Link>
                 </li>
                 <li>
-                  <a href="">Careers RHG</a>
-                </li>
-                <li>
-                  <a href="">Development Opportunities</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-2">
-              <div className="title">Legal</div>
-              <ul>
-                <li>
-                  <a href="">Ad and Cookie policy</a>
-                </li>
-                <li>
-                  <a href="">Digital Millennium copyright Act</a>
-                </li>
-                <li>
-                  <a href="">Legal notice</a>
-                </li>
-                <li>
-                  <a href="">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="">Site usage agreement</a>
+                  <Link to="/">Privacy Policy</Link>
                 </li>
               </ul>
             </div>
@@ -123,50 +90,40 @@ export default function Footer() {
               <div className="title">Help</div>
               <ul>
                 <li>
-                  <a href="">Consumer alerts</a>
+                  <Link to="/faq">FAQ</Link>
                 </li>
                 <li>
-                  <a href="">Contact</a>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
                 <li>
-                  <a href="">FAQ</a>
-                </li>
-                <li>
-                  <a href="">Sitemap</a>
+                  <Link to="/about">About</Link>
                 </li>
               </ul>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <div className="title">Follow us on Social Media</div>
               <ul className="social-link">
                 <li>
-                  <a href="">
+                  <a href="https://www.facebook.com/AGAHOTELS" target="_blank">
                     <i className="fab fa-facebook"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <i className="fab fa-pinterest"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
+                  <a href="https://www.instagram.com/agahotels" target="_blank">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <i className="fab fa-linkedin"></i>
+                  <a href="https://twitter.com/AGAHOTELS" target="_blank">
+                    <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <i className="fab fa-youtube"></i>
+                  <a
+                    href="https://www.tumblr.com/blog/view/agahotels"
+                    target="_blank"
+                  >
+                    <i className="fab fa-tumblr"></i>
                   </a>
                 </li>
               </ul>
