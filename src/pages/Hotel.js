@@ -1,10 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import { Link, useParams } from "react-router-dom";
 import HotelFilter from "../components/hotel/HotelFilter";
 import SearchNavbar from "../components/SearchNavbar";
 import HotelItem from "../components/hotel/HotelItem";
+import axiosInstance from "../helpers/axios";
+import Axios from "axios";
 
 export default function Hotel() {
+  let param = useParams();
+  const [hotel, setHotel] = useState();
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get(`/hotels/${param.destination_id}`, {
+          cancelToken: source.token,
+        });
+        // console.log((await response).data);
+        // setLogo((await response).data.brand.logo)
+        setHotel((await response).data.hotels);
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
+        }
+      }
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, []);
+
   function openHotelNav(e) {
     e.preventDefault();
     document.getElementById("filterSidenav").style.width = "250px";
@@ -32,7 +58,7 @@ export default function Hotel() {
                 <HotelFilter />
               </div>
               <div className="col-lg-8 col-xl-9">
-                <HotelItem />
+                <HotelItem props={hotel}/>
               </div>
             </div>
           </div>

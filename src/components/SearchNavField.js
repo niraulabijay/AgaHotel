@@ -14,11 +14,14 @@ import { addDays, set, format } from "date-fns";
 import RoomSelector from "./RoomSelector";
 import FormikControl from "./FormikComponent/FormikControl";
 import WhereTo from "./WhereTo";
+import axiosInstance from "../helpers/axios";
+import {useHistory} from 'react-router-dom'
 
 const validationSchema = Yup.object({
   destination: Yup.string().required("This Field Cannot be Empty"),
 });
 export default function SearchNavField() {
+  let history = useHistory();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(addDays(new Date(), 1));
   const [cal, setCal] = useState(false);
@@ -26,7 +29,12 @@ export default function SearchNavField() {
   const [adultNumber, setAdultNumber] = useState(0);
 
   const onSubmit = (data) => {
-    console.log(data);
+    let newVar = {destination_id : data.destination.value};
+   
+     axiosInstance.post('/booking/hotels', {destination_id : data.destination.value}).
+     then(res=>   history.push(`/hotel/${res.data.hotels[0].id}`)   
+     )
+     .catch(err => console.log(err, 'error'));
   };
 
   const initialValues = {
