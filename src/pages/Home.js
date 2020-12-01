@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {Link} from "react-router-dom"
 import Banner from "../components/Banner";
 import Designed from "../components/home/Designed";
 import Facilities from "../components/home/Facilities";
@@ -6,6 +7,9 @@ import Welcome from "../components/home/Welcome";
 import BrandSection from "../components/home/BrandSection";
 
 export default function Home() {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <>
       <Banner />
@@ -19,9 +23,9 @@ export default function Home() {
             <div className="item-wrapper">
               <div className="title">Contact AGA Hotels</div>
               <div className="button-container">
-                <a href="" className="mybtn">
+              <Link to="/contact" className="mybtn">
                   Need Help?
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/contact">
            <ContactUs />
           </Route>
-          <Route exact path="/hotel">
+          <Route exact path="/hotel/:destination_id">
             <Hotel />
           </Route>
           <Route exact path="/room">

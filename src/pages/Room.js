@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {Link } from "react-router-dom"
 import SearchNavbar from "../components/SearchNavbar";
 
 export default function Room() {
+	useEffect(()=>{
+		window.scrollTo(0, 0);
+	  },[])
 	return (
 		<>
 			<SearchNavbar />
@@ -53,7 +57,7 @@ export default function Room() {
 											width="100%"
 											height="300"
 											frameBorder="0"
-											style={{border:0}}
+											style={{ border: 0 }}
 											allowFullScreen=""
 											aria-hidden="false"
 											tabIndex="0"
@@ -338,9 +342,9 @@ export default function Room() {
 						<div className="item-wrapper">
 							<div className="title">Contact Aga Hotels</div>
 							<div className="button-container">
-								<a href="" className="mybtn">
+								<Link to="/contact" className="mybtn">
 									Need Help?
-								</a>
+                </Link>
 							</div>
 						</div>
 					</div>
