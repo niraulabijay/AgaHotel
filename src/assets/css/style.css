@@ -4614,20 +4614,23 @@ a:hover {
   min-height: 24px;
 }
 
-.destination-select div div {
+.destination-select div div:nth-child(1) {
   min-height: 10px !important;
-  height: 25px !important;
 }
 
-.destination-select div div div:first-child div {
-  top: 50% !important;
+.destination-select div div:nth-child(1) div:first-child {
+  height: 26px !important;
 }
 
-.destination-select div div div:last-child {
+.destination-select div div:nth-child(1) div:first-child div {
+  top: 70% !important;
+}
+
+.destination-select div div:nth-child(1) div {
   padding: 1px 5px;
 }
 
-.destination-select div div div:last-child div {
-  height: 25px !important;
+.destination-select div div:nth-child(1) div div {
+  height: 20px !important;
 }
 /*# sourceMappingURL=style.css.map */
