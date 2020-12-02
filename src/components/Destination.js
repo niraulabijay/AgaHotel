@@ -49,7 +49,6 @@ const Destination = (props) => {
     <>
       <Field name="destination">
         {({ form: { values, setFieldValue } }) => {
-          //   const { values } = values;
           console.log(values.destination.label);
           return (
             <>

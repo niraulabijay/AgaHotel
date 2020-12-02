@@ -13,13 +13,15 @@ function WhereTo(props) {
     let newVar = { destination_id: data.destination.value };
 
     axiosInstance
-      .post("/booking/hotels", { destination_id: data.destination.value })
+      .post("/booking/hotels", {
+        destination_id: data.destination.value ? data.destination.value : "all",
+      })
       //  then(res=>   console.log(res.data))
       .then((res) => {
         history.push(`/hotel/${res.data.destination_id}`);
         $(".modal-backdrop").remove();
         $("body").removeClass("modal-open");
-        $("#myModal .close").click(); 
+        $("#myModal .close").click();
       })
 
       .catch((err) => console.log(err, "error"));

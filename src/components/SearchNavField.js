@@ -29,9 +29,12 @@ export default function SearchNavField() {
   const [adultNumber, setAdultNumber] = useState(0);
 
   const onSubmit = (data) => {
+    // alert("hello");
+ 
+    console.log(data.destination.value)
     let newVar = {destination_id : data.destination.value};
    
-     axiosInstance.post('/booking/hotels', {destination_id : data.destination.value}).
+     axiosInstance.post('/booking/hotels', {destination_id : data.destination.value ? data.destination.value : "all"}).
     //  then(res=>   console.log(res.data))   
      then(res=>   history.push(`/hotel/${res.data.destination_id}`)   )
 

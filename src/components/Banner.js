@@ -49,7 +49,7 @@ export default function Banner() {
             </div>
             <Link to="/" className="logo-container">
               <img
-                src={require("../assets/images/agaLogo.png")}
+                src={require("../assets/images/agalogo1.png")}
                 className="img-fluid"
                 alt=""
               />
@@ -68,12 +68,12 @@ export default function Banner() {
                 <li>
                   <a href="#brandSection">Brands</a>
                 </li>
-                <li>
+                {/* <li>
                   <NavLink to="/about">About</NavLink>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <NavLink to="/supply">Supply</NavLink>
-                </li>
+                </li> */}
                 <li>
                   <NavLink to="/franchise">Franchise</NavLink>
                 </li>

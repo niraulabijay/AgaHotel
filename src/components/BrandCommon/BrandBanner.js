@@ -56,9 +56,17 @@ export default function BrandBanner(props) {
               {/* <i class="fas fa-phone-alt"></i> */}
               <i class="fas fa-phone-volume"></i>
             </div>
-            <Link to="/" className="logo-container">
+            <Link to="/" className="logo-container brand-logo">
               <img src={brand ? brand.logo : ""} className="img-fluid" alt="" />
             </Link>
+           
+            {/* <Link to="/" className="logo-container">
+              <img
+                src={require("../../assets/images/agaLogo.png")}
+                className="img-fluid"
+                alt=""
+              />
+            </Link> */}
 
             <div className="primary-content">
               <ul className="first-navbar-wrapper">

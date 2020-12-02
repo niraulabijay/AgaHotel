@@ -16,7 +16,7 @@ export default function FixedNavbar() {
         <div className="primary-navbar container">
           <Link to="/" className="logo-container">
             <img
-              src={require("../assets/images/logo2.png")}
+              src={require("../assets/images/agalogo1.png")}
               className="img-fluid"
               alt=""
             />

@@ -270,6 +270,10 @@ a:hover {
   height: 40px;
 }
 
+.primary-navbar .brand-logo img {
+  height: 60px;
+}
+
 .primary-navbar .primary-content .first-navbar-wrapper {
   margin-bottom: 0px;
   display: -webkit-box;
@@ -1243,7 +1247,7 @@ a:hover {
 }
 
 .brands .brand-list .brand-img img {
-  height: 70px;
+  height: 90px;
 }
 
 @media (max-width: 768px) {
@@ -4633,5 +4637,164 @@ a:hover {
   .destination-select {
     width: 100%;
   }
+}
+
+.reward-page .row {
+  margin: 0px;
+}
+
+.reward_coupon {
+  -webkit-box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
+          box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
+  padding-bottom: 10px;
+  margin: 40px;
+  overflow-x: hidden;
+}
+
+.reward_coupon .image_container img {
+  width: 100%;
+}
+
+.reward_coupon .reward_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px;
+  margin-bottom: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reward_coupon .header h1 {
+  color: #212529;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: "Lora", serif;
+}
+
+.reward_coupon .product-btn i {
+  opacity: 0;
+  font-size: 13px;
+  padding-left: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.reward_coupon .product-btn a {
+  background-color: #e5e5e5;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 3px;
+  color: #212529;
+  font-weight: 500;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  display: block;
+  font-family: "Lora", serif;
+}
+
+.reward_coupon .product-btn a:hover {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  padding-right: 30px;
+  background-color: #62668e;
+  color: #ffffff;
+}
+
+.reward_coupon .product-btn a:hover i {
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.reward_coupon .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.reward_coupon .details h2 {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+}
+
+.reward_coupon .line {
+  padding: 0px 5px;
+}
+
+#top_btn .modal-content {
+  margin: 0px 20px;
+}
+
+#top_btn .modal-header {
+  border-bottom: none;
+}
+
+#top_btn .modal-header .modal_header .text {
+  text-transform: uppercase;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 500;
+  color: #2e2751;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Lora", serif;
+}
+
+#top_btn .modal-header .modal_header .para {
+  font-size: 16px;
+  text-align: center;
+  color: #2e2751;
+  line-height: 1.8;
+}
+
+#top_btn .modal-body form .form-control {
+  font-size: 14px;
+}
+
+#top_btn .modal-body form .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #62668e;
+}
+
+#top_btn .modal-footer {
+  border-top: none;
+}
+
+#top_btn .modal-footer .modal_btn {
+  right: -14px;
+  bottom: -14px;
+}
+
+#top_btn .modal-footer .modal_btn a {
+  background-color: #62668e;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px 15px;
+}
+
+#top_btn .modal-footer .modal_btn a span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#top_btn .modal-footer .modal_btn a i {
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

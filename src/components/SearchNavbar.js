@@ -2,12 +2,7 @@ import React from 'react'
 import FixedNavbar from './FixedNavbar';
 import SearchNavField from './SearchNavField';
 
-
-
-
 const SearchNavbar = ({form}) => { 
-	
-	
 	
 	
     return (

@@ -18,6 +18,7 @@ import Supply from "./pages/Supply/Supply";
 import BrandGlobal from "./pages/Brand/BrandGlobal";
 import Franchise from "./pages/Franchise";
 import ContactUs from "./pages/ContactUs";
+import Reward from "./pages/Reward";
 
 
 function App() {
@@ -33,7 +34,10 @@ function App() {
             <About />
           </Route>
           <Route exact path="/contact">
-           <ContactUs />
+            <ContactUs />
+          </Route>
+          <Route exact path="/reward">
+            <Reward />
           </Route>
           <Route exact path="/hotel/:destination_id">
             <Hotel />
