@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react";
 import FixedNavbar from "../../components/FixedNavbar"
 import SupplyComponent from "../../components/Supply/SupplyComponent"
 import SupplyContact from "../../components/Supply/SupplyContact"
 
 
 function Supply(){
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
     return (
       <>
         <div className="fixed-navbar">

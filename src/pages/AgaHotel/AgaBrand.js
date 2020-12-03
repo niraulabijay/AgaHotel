@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BrandBanner from "../../components/BrandCommon/BrandBanner";
 import Welcome from "../../components/AgaHotel/Welcome";
 import WeProvide from "../../components/AgaHotel/WeProvide";
@@ -10,6 +10,9 @@ import Room from "../../components/BrandCommon/Room";
 export default function AgaBrand({ data }) {
 
   const { brand, banner, services, experience, ...rest } = data;
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       <BrandBanner brand={brand} banner={banner} />

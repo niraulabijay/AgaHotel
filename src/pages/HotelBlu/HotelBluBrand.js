@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BrandBanner from "../../components/BrandCommon/BrandBanner";
 import Welcome from "../../components/HotelBlu/Welcome";
 import WeProvide from "../../components/HotelBlu/WeProvide";
@@ -9,6 +9,9 @@ import Room from "../../components/BrandCommon/Room";
 export default function HotelBluBrand({data}) {
   console.log(data)
   const {banner, brand, experience, services, ...rest} = data
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       <BrandBanner brand={brand} banner={banner} />

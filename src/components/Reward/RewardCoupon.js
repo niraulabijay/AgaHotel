@@ -9,14 +9,14 @@ function RewardCoupon() {
             <div className="reward_coupon">
               <div class="image-coantainer">
                 <img
-                  src={require("../../assets/images/sale.jpg")}
+                  src={require("../../assets/images/blackfriday.jpg")}
                   className="img-fluid"
                   alt=""
                 />
               </div>
               <div className="reward_header">
                 <div className="header">
-                  <h1>Get upto 20% off</h1>
+                  <h1>Get upto 50% off</h1>
                 </div>
                 <div className="product-btn">
                   <a href="" data-toggle="modal" data-target="#top_btn">

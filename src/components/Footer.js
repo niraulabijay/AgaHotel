@@ -62,6 +62,9 @@ export default function Footer() {
                 <li>
                   <Link to="/contact">Contact Us</Link>
                 </li>
+                <li>
+                  <Link to="/reward">Reward</Link>
+                </li>
               </ul>
             </div>
 
