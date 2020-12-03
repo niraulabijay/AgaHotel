@@ -31,11 +31,11 @@ export default function BrandBanner(props) {
     var sticky = navbar.offsetTop + 5;
     function scrollFunction() {
       if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
+        navbar.classList.add("sticky" + props.brandcolor);
         firstNavbar.style.display = "none";
         bookingBtn.style.background = "#ff9800";
       } else {
-        navbar.classList.remove("sticky");
+        navbar.classList.remove("sticky" + props.brandcolor);
         firstNavbar.style.display = "flex";
         bookingBtn.style.background = "none";
       }
@@ -46,10 +46,12 @@ export default function BrandBanner(props) {
     document.getElementById("mySidenav").style.width = "250px";
   }
 
+
+
   return (
     <>
       <div className="banner" id="topbanner">
-        <div className="navbar-wrapper">
+        <div className={`navbar-wrapper ${props.brandcolor}`}>
           <div className="primary-navbar container">
             <div className="bars-call d-block d-lg-none">
               {/* <i class="fas fa-phone-alt"></i> */}
@@ -59,7 +61,7 @@ export default function BrandBanner(props) {
             <Link to="/" className="logo-container brand-logo">
               <img src={brand ? brand.logo : ""} className="img-fluid" alt="" />
             </Link>
-           
+
             {/* <Link to="/" className="logo-container">
               <img
                 src={require("../../assets/images/agaLogo.png")}

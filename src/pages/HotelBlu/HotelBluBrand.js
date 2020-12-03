@@ -14,11 +14,11 @@ export default function HotelBluBrand({data}) {
     }, []);
   return (
     <>
-      <BrandBanner brand={brand} banner={banner} />
+      <BrandBanner brand={brand} banner={banner} brandcolor="blunav" />
       <div className="aga-brand">
         <Welcome />
         <Experience experience={experience} brand={brand} />
-        <WeProvide services={services}/>
+        <WeProvide services={services} />
         <Room />
         <BrandContact />
       </div>

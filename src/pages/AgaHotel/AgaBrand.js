@@ -15,7 +15,7 @@ export default function AgaBrand({ data }) {
     }, []);
   return (
     <>
-      <BrandBanner brand={brand} banner={banner} />
+      <BrandBanner brand={brand} banner={banner} brandcolor = "aganav" />
       <div className="aga-brand">
         <Welcome />
         <Experience brand={brand} experience={experience} />

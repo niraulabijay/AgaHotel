@@ -14,10 +14,10 @@ export default function EarthBrand({ data }) {
     }, []);
   return (
     <>
-      <BrandBanner brand={brand} banner={banner} />
+      <BrandBanner brand={brand} banner={banner} brandcolor="erthnav" />
       <div className="earthinn-brand">
         <Welcome />
-        <Services services={services}/>
+        <Services services={services} />
         <Room />
         <Location />
         <BrandContact />

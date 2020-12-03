@@ -279,6 +279,19 @@ a:hover {
   .navbar-wrapper {
     background: #62668e;
   }
+  .aganav {
+    background: #5a9b8f;
+  }
+  .erthnav {
+    background: #3b5e7d;
+  }
+  .blunav {
+    background: #71a6d5;
+  }
+  .lyfenav {
+    background: #ee9276;
+  }
+
   .primary-navbar {
     padding: 0 15px;
     .logo-container {
@@ -697,6 +710,65 @@ a:hover {
       padding-bottom: 0px;
     }
   }
+
+  .stickyaganav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    transition: all 0.3s linear;
+    background: #5a9b8f;
+    padding: 0px;
+    .primary-navbar {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  .stickyerthnav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    transition: all 0.3s linear;
+    background: #3b5e7d;
+    padding: 0px;
+    .primary-navbar {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  .stickyblunav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    transition: all 0.3s linear;
+    background: #71a6d5;
+    padding: 0px;
+    .primary-navbar {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  .stickylyfenav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    transition: all 0.3s linear;
+    background: #ee9276;
+    // background-image: linear-gradient(#ffb098, #ffb098);
+    padding: 0px;
+    .primary-navbar {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+
   // .search-wrapper.sticky {
   //   position: fixed;
   //   top: 0;
@@ -4195,7 +4267,7 @@ a:hover {
         color: #2e2751;
         margin-top: 20px;
         margin-bottom: 10px;
-         font-family: "Lora", serif;
+        font-family: "Lora", serif;
       }
       .para {
         font-size: 16px;
@@ -4210,7 +4282,7 @@ a:hover {
       .form-control {
         font-size: 14px;
       }
-      .form-control:focus{
+      .form-control:focus {
         box-shadow: none;
         border-color: #62668e;
       }

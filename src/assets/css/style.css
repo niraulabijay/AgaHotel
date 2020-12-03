@@ -343,6 +343,18 @@ a:hover {
   .navbar-wrapper {
     background: #62668e;
   }
+  .aganav {
+    background: #5a9b8f;
+  }
+  .erthnav {
+    background: #3b5e7d;
+  }
+  .blunav {
+    background: #71a6d5;
+  }
+  .lyfenav {
+    background: #ee9276;
+  }
   .primary-navbar {
     padding: 0 15px;
   }
@@ -845,6 +857,74 @@ a:hover {
 }
 
 .banner .sticky .primary-navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.banner .stickyaganav {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #5a9b8f;
+  padding: 0px;
+}
+
+.banner .stickyaganav .primary-navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.banner .stickyerthnav {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #3b5e7d;
+  padding: 0px;
+}
+
+.banner .stickyerthnav .primary-navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.banner .stickyblunav {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #71a6d5;
+  padding: 0px;
+}
+
+.banner .stickyblunav .primary-navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.banner .stickylyfenav {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background: #ee9276;
+  padding: 0px;
+}
+
+.banner .stickylyfenav .primary-navbar {
   padding-top: 0px;
   padding-bottom: 0px;
 }

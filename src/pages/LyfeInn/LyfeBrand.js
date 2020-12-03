@@ -14,9 +14,8 @@ export default function LyfeBrand({data}) {
     }, []);
   return (
     <>
-      <BrandBanner brand={brand} banner={banner} />
+      <BrandBanner brand={brand} banner={banner} brandcolor="lyfenav" />
       <div className="lyfe-brand">
-
         <Welcome />
         <Services services={services} />
         <Room />
