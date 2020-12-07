@@ -20,11 +20,10 @@ function ContactBanner() {
             </ul>
           </div>
           <div className="header">Contact Aga Hotels</div>
-          <div className="sub_header">
-            Contact us for more details.
-          </div>
+          <div className="sub_header">Contact us for more details.</div>
         </div>
         <div className="service_banner_background_image"></div>
+        <div className="service_banner_background_gradient"></div>
       </div>
     </>
   );

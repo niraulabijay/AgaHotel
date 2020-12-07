@@ -1,13 +1,14 @@
-import Axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import axiosInstance from "../../helpers/axios";
+import React from "react";
+
+import HotelSkeleton from "../../skeleton/HotelSkeleton";
 
 function HotelItem({ props }) {
   console.log(props);
 
   return (
     <>
+      {!props && [1, 2].map((n) => <HotelSkeleton />)}
+
       {props &&
         props.map((hotelItem, index) => (
           <div className="hotel-item" key={index}>

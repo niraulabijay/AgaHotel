@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import HotelFilter from "../components/hotel/HotelFilter";
 import SearchNavbar from "../components/SearchNavbar";
@@ -9,12 +9,12 @@ import Axios from "axios";
 export default function Hotel() {
   let param = useParams();
   const [hotel, setHotel] = useState();
-  const scrollTop = () =>{
+  const scrollTop = () => {
     window.scrollTo(0, 0);
-    console.log('scroll')
-  }
+    console.log("scroll");
+  };
   useEffect(() => {
-   scrollTop();
+    scrollTop();
     let source = Axios.CancelToken.source();
     const loadData = async () => {
       try {
@@ -63,7 +63,7 @@ export default function Hotel() {
                 <HotelFilter />
               </div>
               <div className="col-lg-8 col-xl-9">
-                <HotelItem props={hotel}/>
+                <HotelItem props={hotel} />
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function Hotel() {
             <div className="item-wrapper">
               <div className="title">Contact Aga Hotels</div>
               <div className="button-container">
-              <Link to="/contact" className="mybtn">
+                <Link to="/contact" className="mybtn">
                   Need Help?
                 </Link>
               </div>

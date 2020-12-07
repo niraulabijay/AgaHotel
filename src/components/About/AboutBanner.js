@@ -25,6 +25,7 @@ function AboutBanner() {
           </div>
         </div>
         <div className="service_banner_background_image"></div>
+        <div className="service_banner_background_gradient"></div>
       </div>
     </>
   );

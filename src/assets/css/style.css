@@ -4563,7 +4563,8 @@ a:hover {
 }
 
 .register-banner .service_banner_background_image {
-  background-image: url(../images/hotel1.jpg);
+  background-image: url(../images/brandbanner.jpg);
+  background-position: center;
   position: absolute;
   height: 100%;
   top: 0;
@@ -4655,8 +4656,15 @@ a:hover {
   .register-banner {
     margin-top: 60px;
   }
+  .register-banner .service_header {
+    padding-left: 15px;
+  }
   .register-banner .service_header .header {
-    font-size: 36px;
+    font-size: 32px;
+    margin-top: 30px;
+  }
+  .register-banner .service_header .sub-header {
+    font-size: 13px;
   }
 }
 

@@ -44,7 +44,6 @@ export default function Banner() {
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
             <div className="bars-call d-block d-lg-none">
-              {/* <i class="fas fa-phone-alt"></i> */}
               <i class="fas fa-phone-volume"></i>
             </div>
             <Link to="/" className="logo-container">
@@ -68,12 +67,6 @@ export default function Banner() {
                 <li>
                   <a href="#brandSection">Brands</a>
                 </li>
-                {/* <li>
-                  <NavLink to="/about">About</NavLink>
-                </li> */}
-                {/* <li>
-                  <NavLink to="/supply">Supply</NavLink>
-                </li> */}
                 <li>
                   <NavLink to="/franchise">Franchise</NavLink>
                 </li>
@@ -84,6 +77,9 @@ export default function Banner() {
                   <a className="booking-btn" href="#topbanner">
                     Book Now
                   </a>
+                </li>
+                <li>
+                  <Link to="/register">Join Us</Link>
                 </li>
               </ul>
             </div>

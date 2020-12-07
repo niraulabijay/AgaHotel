@@ -46,8 +46,6 @@ export default function BrandBanner(props) {
     document.getElementById("mySidenav").style.width = "250px";
   }
 
-
-
   return (
     <>
       <div className="banner" id="topbanner">
@@ -82,12 +80,6 @@ export default function BrandBanner(props) {
               </ul>
               <ul className="second-navbar-wrapper">
                 <li>
-                  <NavLink to="/about">About</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/supply">Supply</NavLink>
-                </li>
-                <li>
                   <NavLink to="/franchise">Franchise</NavLink>
                 </li>
                 <li>
@@ -97,6 +89,9 @@ export default function BrandBanner(props) {
                   <a className="booking-btn" href="#topbanner">
                     Booking
                   </a>
+                </li>
+                <li>
+                  <Link to="/register">Join Us</Link>
                 </li>
               </ul>
             </div>

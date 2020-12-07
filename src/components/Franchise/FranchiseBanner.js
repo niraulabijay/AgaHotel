@@ -14,7 +14,7 @@ function FranchiseBanner() {
               </li>
               <li>
                 <a className="active" href="">
-                  Franchise 
+                  Franchise
                 </a>
               </li>
             </ul>
@@ -25,6 +25,7 @@ function FranchiseBanner() {
           </div>
         </div>
         <div className="service_banner_background_image"></div>
+        <div className="service_banner_background_gradient"></div>
       </div>
     </>
   );

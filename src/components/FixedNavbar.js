@@ -14,6 +14,9 @@ export default function FixedNavbar() {
     <>
       <div className="navbar-wrapper">
         <div className="primary-navbar container">
+          <div className="bars-call d-block d-lg-none">
+            <i class="fas fa-phone-volume"></i>
+          </div>
           <Link to="/" className="logo-container">
             <img
               src={require("../assets/images/agalogo1.png")}
@@ -33,20 +36,18 @@ export default function FixedNavbar() {
             </ul>
             <ul className="second-navbar-wrapper">
               <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/supply">Supply</NavLink>
-              </li>
-              <li>
                 <NavLink to="/franchise">Franchise</NavLink>
               </li>
               <li>
                 <Link to="/contact">Contact Us</Link>
               </li>
+              
+              <li>
+                <Link to="/register">Join Us</Link>
+              </li>
             </ul>
           </div>
-          <div className="bars d-block d-md-none">
+          <div className="bars d-block d-lg-none">
             <span onClick={openNav}>
               <i className="fa fa-bars"></i>
             </span>

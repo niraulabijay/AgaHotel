@@ -6,12 +6,17 @@ import AgaBrand from "../AgaHotel/AgaBrand";
 import LyfeBrand from "../LyfeInn/LyfeBrand";
 import HotelBluBrand from "../HotelBlu/HotelBluBrand";
 import EarthBrand from "../EarthInn/EarthBrand";
+import SkeletonElement from "../../skeleton/SkeletonElement";
 
 function BrandGlobal() {
   let { slug } = useParams();
   const [brandName, setBrandName] = useState(slug);
   const [logo, setLogo] = useState();
   const [brand, setBrand] = useState();
+
+  const top = () => {
+    window.scrollTo(0, 0);
+  };
 
   useEffect(() => {
     let source = Axios.CancelToken.source();
@@ -37,6 +42,12 @@ function BrandGlobal() {
 
   return (
     <div>
+      {!brand && (
+        <>
+          {top()}
+          <SkeletonElement type="brandpage" />
+        </>
+      )}
       {brand && brand.brand.slug == "lyfe-inn" ? (
         <LyfeBrand data={brand} />
       ) : brand && brand.brand.slug === "hotel-blu" ? (
