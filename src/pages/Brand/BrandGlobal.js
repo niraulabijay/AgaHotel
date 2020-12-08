@@ -46,6 +46,8 @@ function BrandGlobal() {
         <>
           {top()}
           <SkeletonElement type="brandpage" />
+          <SkeletonElement type="brandnav" />
+          <SkeletonElement type="brandfield" />
         </>
       )}
       {brand && brand.brand.slug == "lyfe-inn" ? (

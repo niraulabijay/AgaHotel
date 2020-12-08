@@ -77,6 +77,9 @@ export default function BrandBanner(props) {
                     <option value="">+1 (415) - 554 2661 </option>
                   </select>
                 </li>
+                <li>
+                  <Link to="/register">Join Us</Link>
+                </li>
               </ul>
               <ul className="second-navbar-wrapper">
                 <li>
@@ -89,9 +92,6 @@ export default function BrandBanner(props) {
                   <a className="booking-btn" href="#topbanner">
                     Booking
                   </a>
-                </li>
-                <li>
-                  <Link to="/register">Join Us</Link>
                 </li>
               </ul>
             </div>

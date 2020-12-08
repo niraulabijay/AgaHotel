@@ -33,6 +33,9 @@ export default function FixedNavbar() {
                   <option value="">+1 (415) - 554 2661</option>
                 </select>
               </li>
+              <li>
+                <Link to="/register">Join Us</Link>
+              </li>
             </ul>
             <ul className="second-navbar-wrapper">
               <li>
@@ -41,10 +44,7 @@ export default function FixedNavbar() {
               <li>
                 <Link to="/contact">Contact Us</Link>
               </li>
-              
-              <li>
-                <Link to="/register">Join Us</Link>
-              </li>
+
             </ul>
           </div>
           <div className="bars d-block d-lg-none">

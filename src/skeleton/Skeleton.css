@@ -1,5 +1,5 @@
 .skeleton {
-  background: #dddddda3;
+  background: #f9f7f6;
   /* margin: 10px 0; */
   border-radius: 4px;
 }
@@ -26,17 +26,37 @@
   width: 100px;
   border-radius: 20px;
 }
-.skeleton.btn{
-    height: 100%;
-    width: 100%;
+.skeleton.btn {
+  height: 100%;
+  width: 100%;
 }
-.skeleton.image{
-    height: 150px;
-    width: 100%;
-    border-radius: 10px;
+.skeleton.image {
+  height: 150px;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.skeleton.brandpage{
-  height: 100vh;
+.skeleton.brandpage {
+  height: 90vh;
   width: 100vw;
+  position: relative;
+  z-index: 1;
+}
+.skeleton.brandnav {
+  position: absolute;
+  top: 0px;
+  height: 12vh;
+  width: 100vw;
+  background-color: #dddddda3;
+  z-index: 2;
+}
+.skeleton.brandfield {
+  position: absolute;
+  bottom: 0px;
+  left: 10vw;
+  right: 10vw;
+  height: 15vh;
+  width: 80vw;
+  background-color: #dddddda3;
+  z-index: 2;
 }

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import Axios from "axios";
+import axiosInstance from "../../helpers/axios";
 
 export default function Room() {
+  const [room, setRoom] = useState([]);
   const settings = {
     dots: true,
     infinite: true,
@@ -44,6 +47,31 @@ export default function Room() {
       },
     ],
   };
+
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get("/brand/rooms/erth-inn", {
+          cancelToken: source.token,
+        });
+        setRoom((await response).data.roomTypes);
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
+        }
+      }
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, []);
+
+  room.map((r) => {
+    console.log(r.featureImage);
+  });
+
   return (
     <>
       <div className="room">
@@ -60,135 +88,35 @@ export default function Room() {
             <div className="col-md-9">
               <div className="room-slider-wrapper">
                 <Slider {...settings}>
-                  <div>
-                    <div className="room-wrapper">
-                      <div className="img-container">
-                        <img
-                          src={require("../../assets/images/room1.jpg")}
-                          className="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                      <div className="info-wrap">
-                        <div className="room-name">
-                          <div className="title">Deluxe Double Room</div>
-                          {/* <div className="logo-container">
-                            <img
-                              src={require("../../assets/images/agaLogo.png")}
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </div> */}
-                        </div>
-                        <div className="description">
-                          For a comfortable stay, book one of our spacious
-                          standard rooms with a king bed and a trundle bed. Walk
-                          out onto the balcony to take in views of the tropical
-                          gardens, or relax in the cool air-conditioning while
-                          you enjoy free Wi-Fi
-                        </div>
-                        <div className="price-wrap">
-                          <span>Price</span>
-                          <span className="price">
-                            $79<sup>*</sup>
-                          </span>
-                        </div>
-                        <div className="book-btn">
-                          <a href="">Book</a>
+                  {room &&
+                    room.map((r) => (
+                      <div>
+                        <div className="room-wrapper">
+                          <div
+                            className="img-container"
+                            style={{
+                              backgroundImage: `url(${r.featureImage})`,
+                            }}
+                          ></div>
+                          <div className="info-wrap">
+                            <div className="room-name">
+                              <div className="title">{r.title}</div>
+                            </div>
+                            <div className="description">{r.description}</div>
+                            <div className="price-wrap">
+                              <span>Price</span>
+                              <span className="price">
+                                ${r.price}
+                                <sup>*</sup>
+                              </span>
+                            </div>
+                            <div className="book-btn">
+                              <a href="">Book</a>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="room-wrapper">
-                      <div className="img-container">
-                        <img
-                          src={require("../../assets/images/IMG-8426.jpg")}
-                          className="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                      <div className="info-wrap">
-                        <div className="room-name">
-                          <div className="title">Deluxe King Room</div>
-                        </div>
-                        <div className="description">
-                          Our spacious Deluxe King Room features a king bed, a
-                          trundle bed, and a private balcony with a view of the
-                          hotel’s sparkling lagoon pools.
-                        </div>
-                        <div className="price-wrap">
-                          <span>Price</span>
-                          <span className="price">
-                            $79<sup>*</sup>
-                          </span>
-                        </div>
-                        <div className="book-btn">
-                          <a href="">Book</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="room-wrapper">
-                      <div className="img-container">
-                        <img
-                          src={require("../../assets/images/room2.jpg")}
-                          className="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                      <div className="info-wrap">
-                        <div className="room-name">
-                          <div className="title">Deluxe Queen Room</div>
-                        </div>
-                        <div className="description">
-                          Our spacious Deluxe Queen Room features a queen bed, a
-                          trundle bed, and a private balcony with a view of the
-                          hotel’s sparkling lagoon pools.
-                        </div>
-                        <div className="price-wrap">
-                          <span>Price</span>
-                          <span className="price">
-                            $79<sup>*</sup>
-                          </span>
-                        </div>
-                        <div className="book-btn">
-                          <a href="">Book</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="room-wrapper">
-                      <div className="img-container">
-                        <img
-                          src={require("../../assets/images/IMG-8426.jpg")}
-                          className="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                      <div className="info-wrap">
-                        <div className="room-name">
-                          <div className="title">Royal Suite</div>
-                        </div>
-                        <div className="description">
-                          Planning an extended holiday or want a little extra
-                          space? Choose this air-conditioned suite with a king
-                          bed and a separate living room with a sleeper sofa.
-                        </div>
-                        <div className="price-wrap">
-                          <span>Price</span>
-                          <span className="price">
-                            $79<sup>*</sup>
-                          </span>
-                        </div>
-                        <div className="book-btn">
-                          <a href="">Book</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    ))}
                 </Slider>
               </div>
             </div>

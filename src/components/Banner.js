@@ -62,6 +62,9 @@ export default function Banner() {
                     <option value="">+1 (415) - 554 2661 </option>
                   </select>
                 </li>
+                <li>
+                  <Link to="/register">Join Us</Link>
+                </li>
               </ul>
               <ul className="second-navbar-wrapper">
                 <li>
@@ -77,9 +80,6 @@ export default function Banner() {
                   <a className="booking-btn" href="#topbanner">
                     Book Now
                   </a>
-                </li>
-                <li>
-                  <Link to="/register">Join Us</Link>
                 </li>
               </ul>
             </div>

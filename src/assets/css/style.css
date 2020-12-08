@@ -1338,7 +1338,7 @@ a:hover {
     padding: 25px 0px;
   }
   .brands .brand-list .brand-img img {
-    height: 45px;
+    height: 60px;
   }
 }
 
@@ -3201,10 +3201,8 @@ a:hover {
   height: 180px;
   width: 100%;
   overflow: hidden;
-}
-
-.room .room-wrapper .img-container img {
-  height: inherit;
+  background-position: center;
+  background-size: cover;
 }
 
 .room .room-wrapper .info-wrap {

@@ -1175,7 +1175,7 @@ a:hover {
     .brand-list {
       padding: 25px 0px;
       .brand-img img {
-        height: 45px;
+        height: 60px;
       }
     }
   }
@@ -2767,12 +2767,11 @@ a:hover {
     .img-container {
       height: 180px;
       width: 100%;
-
       overflow: hidden;
-      img {
-        height: inherit;
-      }
+      background-position: center;
+      background-size: cover;
     }
+   
     .info-wrap {
       padding: 15px;
     }
@@ -4037,7 +4036,6 @@ a:hover {
     background-size: cover;
     z-index: 1;
   }
- 
 }
 
 .register-form-container {
@@ -4113,7 +4111,7 @@ a:hover {
         font-size: 32px;
         margin-top: 30px;
       }
-      .sub-header{
+      .sub-header {
         font-size: 13px;
       }
     }
