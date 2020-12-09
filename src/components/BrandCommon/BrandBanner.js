@@ -89,9 +89,9 @@ export default function BrandBanner(props) {
                   <Link to="/contact">Contact Us</Link>
                 </li>
                 <li>
-                  <a className="booking-btn" href="#topbanner">
-                    Booking
-                  </a>
+                  <Link to="/hotel/all">
+                    <span className="booking-btn">Book Now</span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -104,30 +104,32 @@ export default function BrandBanner(props) {
         </div>
         <div className="slider-wrapper">
           <Slider {...settings}>
-            <div className="slider">
-              <div className="img-container">
-                <img
-                  src={banner && banner.image}
-                  className="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div
-                className={
-                  "overlay-container" +
-                  " " +
-                  (brand.slug == "aga-hotel" ? "agaoverlay" : "")
-                }
-              >
-                <div className="container">
-                  <div className="title">We Care About You</div>
-                  <div className="subtitle">
-                    Peace of mind and greater travel flexibility are yours with
-                    our extended cancellation policy.
+            {banner &&  (
+              <div className="slider">
+                <div className="img-container">
+                  <img
+                    src={banner && banner.image}
+                    className="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div
+                  className={
+                    "overlay-container" +
+                    " " +
+                    (brand.slug == "aga-hotel" ? "agaoverlay" : "")
+                  }
+                >
+                  <div className="container">
+                    <div className="title">We Care About You</div>
+                    <div className="subtitle">
+                      Peace of mind and greater travel flexibility are yours
+                      with our extended cancellation policy.
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </Slider>
         </div>
 

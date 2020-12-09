@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import Axios from "axios";
 import axiosInstance from "../../helpers/axios";
 
-export default function Room() {
+export default function Room({ hotelbrand }) {
+  console.log(hotelbrand);
   const [room, setRoom] = useState([]);
   const settings = {
     dots: true,
@@ -52,7 +53,7 @@ export default function Room() {
     let source = Axios.CancelToken.source();
     const loadData = async () => {
       try {
-        const response = axiosInstance.get("/brand/rooms/erth-inn", {
+        const response = axiosInstance.get(`/brand/rooms/${hotelbrand}`, {
           cancelToken: source.token,
         });
         setRoom((await response).data.roomTypes);

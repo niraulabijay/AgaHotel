@@ -33,7 +33,7 @@ export default function FixedNavbar() {
                   <option value="">+1 (415) - 554 2661</option>
                 </select>
               </li>
-              <li>
+              <li className="fixednav-joinus">
                 <Link to="/register">Join Us</Link>
               </li>
             </ul>

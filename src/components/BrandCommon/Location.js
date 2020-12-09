@@ -1,28 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import Axios from "axios";
+import axiosInstance from "../../helpers/axios";
 
-export default function Location() {
+export default function Location({ hotelbrand }) {
+  const [location, setLocation] = useState([]);
+
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get(`/brand/hotels/${hotelbrand}`, {
+          cancelToken: source.token,
+        });
+        // console.log((await response).data);
+        // setLogo((await response).data.brand.logo)
+        setLocation((await response).data.hotels);
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
+        }
+      }
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, []);
+
+  // console.log(location)/
+
   return (
     <>
       <div class="location-container">
         <div class="header">Our Locations</div>
         <div class="brand-location">
           <Slider>
-            <div class="slider">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="img-container"></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-container">
-                    <div>3642 Slauson</div>
-                    <div>Ave Maywood,</div>
-                    <div>CA 90270</div>
+            {location &&
+              location.map((loca) => (
+                <div class="slider">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div
+                        class="img-container "
+                        style={{ backgroundImage: `url(${loca.image})` }}
+                      ></div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="text-container">
+                        <div className="brand-title">{loca.title}</div>
+                        <div>{loca.contact.street}</div>
+                        <div>{loca.contact.city}</div>
+                        <div>
+                          {loca.contact.state} {loca.contact.postcode}
+                        </div>
+                        <div>{loca.contact.phone_1}</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="slider">
+              ))}
+
+            {/* <div class="slider">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="img-container location-image2"></div>
@@ -36,6 +75,7 @@ export default function Location() {
                 </div>
               </div>
             </div>
+          */}
           </Slider>
         </div>
       </div>

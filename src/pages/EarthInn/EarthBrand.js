@@ -18,8 +18,8 @@ export default function EarthBrand({ data }) {
       <div className="earthinn-brand">
         <Welcome />
         <Services services={services} />
-        <Room />
-        <Location />
+        <Room hotelbrand={brand.slug} />
+        <Location hotelbrand={brand.slug} />
         <BrandContact />
       </div>
     </>

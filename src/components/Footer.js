@@ -32,20 +32,6 @@ export default function Footer() {
     <>
       <div className="footer">
         <div className="container">
-          <div className="subscribe-container">
-            <div className="item-wrapper">
-              <div className="title">
-                Never miss out on our most popular deals
-              </div>
-              <form action="">
-                <input type="text" placeholder="Your Email" />
-
-                <a href="" className="mybtn">
-                  Subscribe
-                </a>
-              </form>
-            </div>
-          </div>
           <div className="row">
             <div className="col-lg-3 col-md-2">
               <div className="title">Quick Links</div>

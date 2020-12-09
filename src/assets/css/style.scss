@@ -230,12 +230,13 @@ a:hover {
       margin-bottom: 0px;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       list-style: none;
       i {
         color: white;
       }
       li {
-        padding: 0px 10px;
+        padding: 0px 15px;
         line-height: 40px;
         font-size: 13px;
         font-weight: bold;
@@ -248,6 +249,9 @@ a:hover {
           border: 0px;
           font-weight: bold;
         }
+      }
+      .fixednav-joinus {
+        padding-right: 0px;
       }
     }
     .second-navbar-wrapper {
@@ -263,12 +267,14 @@ a:hover {
         font-weight: bold;
         a {
           color: white;
-          padding-right: 15px;
-          padding-left: 30px;
+          // padding-right: 15px;
+          padding-left: 45px;
+        }
+        a:nth-of-type(n) {
+          padding-right: 0px;
         }
         .booking-btn {
           padding: 5px 15px;
-          margin-left: 15px;
         }
       }
     }
@@ -1409,7 +1415,7 @@ a:hover {
   }
 }
 .footer {
-  padding: 30px 0;
+  padding: 60px 0px 30px 0;
   .title {
     font-size: 14px;
     font-weight: 600;
@@ -2771,7 +2777,7 @@ a:hover {
       background-position: center;
       background-size: cover;
     }
-   
+
     .info-wrap {
       padding: 15px;
     }
@@ -2952,7 +2958,6 @@ a:hover {
 }
 
 .location-container {
-  margin-bottom: 140px;
   .header {
     font-size: 50px;
     color: #000;
@@ -2967,12 +2972,8 @@ a:hover {
       height: 387px;
       background-size: cover;
       background-position: center;
-      background-image: url("../images/earthini.jpg");
     }
-    .location-image2 {
-      background-image: url("../images/earthinc.jpg");
-    }
-
+  
     .text-container {
       height: 100%;
       color: #fff;
@@ -2981,6 +2982,10 @@ a:hover {
       justify-content: center;
       margin-left: 80px;
       font-size: 15px;
+      .brand-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
     }
     .slick-prev {
       left: 70px;
@@ -3023,6 +3028,99 @@ a:hover {
         align-items: center;
         margin-left: 0px;
         padding: 20px 0px;
+      }
+    }
+  }
+}
+
+.brandjoin-banner {
+  position: relative;
+  height: 45vh;
+  margin-top: 60px;
+  .service_header {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50px;
+    padding-left: 100px;
+    .header {
+      font-size: 35px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 50px;
+    }
+    .sub_header {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .brand-button {
+      span {
+        border: 1px solid;
+        padding: 20px 25px;
+        display: inline-block;
+        margin-top: 30px;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      span:hover {
+        background-color: #6d7787;
+      }
+    }
+  }
+  .service_banner_background_gradient {
+    background: linear-gradient(
+      90deg,
+      #2d3954,
+      rgba(39, 16, 102, 0) 85%,
+      rgba(39, 16, 102, 0) 0,
+      #2d3954
+    );
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .service_banner_background_image {
+    background-image: url(../images/brandjoin.jpg);
+    background-position: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    z-index: 1;
+  }
+}
+@media (max-width: 576px) {
+  .brandjoin-banner {
+    position: relative;
+    height: 35vh;
+    margin-top: 60px;
+    .service_header {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      padding-top: 20px;
+      padding-left: 20px;
+      .header {
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-top: 30px;
       }
     }
   }

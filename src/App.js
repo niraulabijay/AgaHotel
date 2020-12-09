@@ -20,7 +20,6 @@ import Franchise from "./pages/Franchise";
 import ContactUs from "./pages/ContactUs";
 import Reward from "./pages/Reward";
 
-
 function App() {
   return (
     <Router>
@@ -40,6 +39,9 @@ function App() {
             <Reward />
           </Route>
           <Route exact path="/hotel/:destination_id">
+            <Hotel />
+          </Route>
+          <Route exact path="/hotel/all">
             <Hotel />
           </Route>
           <Route exact path="/room">

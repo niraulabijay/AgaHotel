@@ -282,6 +282,9 @@ a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
 }
 
@@ -290,7 +293,7 @@ a:hover {
 }
 
 .primary-navbar .primary-content .first-navbar-wrapper li {
-  padding: 0px 10px;
+  padding: 0px 15px;
   line-height: 40px;
   font-size: 13px;
   font-weight: bold;
@@ -305,6 +308,10 @@ a:hover {
   color: white;
   border: 0px;
   font-weight: bold;
+}
+
+.primary-navbar .primary-content .first-navbar-wrapper .fixednav-joinus {
+  padding-right: 0px;
 }
 
 .primary-navbar .primary-content .second-navbar-wrapper {
@@ -330,13 +337,15 @@ a:hover {
 
 .primary-navbar .primary-content .second-navbar-wrapper li a {
   color: white;
-  padding-right: 15px;
-  padding-left: 30px;
+  padding-left: 45px;
+}
+
+.primary-navbar .primary-content .second-navbar-wrapper li a:nth-of-type(n) {
+  padding-right: 0px;
 }
 
 .primary-navbar .primary-content .second-navbar-wrapper li .booking-btn {
   padding: 5px 15px;
-  margin-left: 15px;
 }
 
 @media (max-width: 992px) {
@@ -1595,7 +1604,7 @@ a:hover {
 }
 
 .footer {
-  padding: 30px 0;
+  padding: 60px 0px 30px 0;
 }
 
 .footer .title {
@@ -3402,10 +3411,6 @@ a:hover {
   }
 }
 
-.location-container {
-  margin-bottom: 140px;
-}
-
 .location-container .header {
   font-size: 50px;
   color: #000;
@@ -3423,11 +3428,6 @@ a:hover {
   height: 387px;
   background-size: cover;
   background-position: center;
-  background-image: url("../images/earthini.jpg");
-}
-
-.location-container .brand-location .location-image2 {
-  background-image: url("../images/earthinc.jpg");
 }
 
 .location-container .brand-location .text-container {
@@ -3445,6 +3445,11 @@ a:hover {
           justify-content: center;
   margin-left: 80px;
   font-size: 15px;
+}
+
+.location-container .brand-location .text-container .brand-title {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .location-container .brand-location .slick-prev {
@@ -3492,6 +3497,116 @@ a:hover {
             align-items: center;
     margin-left: 0px;
     padding: 20px 0px;
+  }
+}
+
+.brandjoin-banner {
+  position: relative;
+  height: 45vh;
+  margin-top: 60px;
+}
+
+.brandjoin-banner .service_header {
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.brandjoin-banner .service_header .header {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.brandjoin-banner .service_header .sub_header {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.brandjoin-banner .service_header .brand-button span {
+  border: 1px solid;
+  padding: 20px 25px;
+  display: inline-block;
+  margin-top: 30px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.brandjoin-banner .service_header .brand-button span:hover {
+  background-color: #6d7787;
+}
+
+.brandjoin-banner .service_banner_background_gradient {
+  background: -webkit-gradient(linear, left top, right top, from(#2d3954), color-stop(85%, rgba(39, 16, 102, 0)), color-stop(0, rgba(39, 16, 102, 0)), to(#2d3954));
+  background: linear-gradient(90deg, #2d3954, rgba(39, 16, 102, 0) 85%, rgba(39, 16, 102, 0) 0, #2d3954);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.brandjoin-banner .service_banner_background_image {
+  background-image: url(../images/brandjoin.jpg);
+  background-position: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  z-index: 1;
+}
+
+@media (max-width: 576px) {
+  .brandjoin-banner {
+    position: relative;
+    height: 35vh;
+    margin-top: 60px;
+  }
+  .brandjoin-banner .service_header {
+    position: relative;
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .brandjoin-banner .service_header .header {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 30px;
   }
 }
 

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FixedNavbar from "../components/FixedNavbar";
 import RegisterBanner from "../components/Register/RegisterBanner";
 import RegisterForm from "../components/Register/RegisterForm";
 
 export default function Register() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="fixed-navbar">
@@ -20,7 +23,6 @@ export default function Register() {
                   <div class="form-header">Registration Form</div>
 
                   <RegisterForm />
-                  
                 </div>
               </div>
             </div>

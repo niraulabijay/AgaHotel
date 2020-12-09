@@ -76,10 +76,17 @@ export default function Banner() {
                 <li>
                   <Link to="/contact">Contact Us</Link>
                 </li>
-                <li>
+                {/* <li>
                   <a className="booking-btn" href="#topbanner">
                     Book Now
                   </a>
+                </li> */}
+                <li>
+                  <Link to="/hotel/all">
+                    <span className="booking-btn" >
+                      Book Now
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>

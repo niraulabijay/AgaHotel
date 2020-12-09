@@ -16,15 +16,10 @@ export default function MobileNavbar() {
         <Link to="/franchise">Franchise</Link>
         <Link to="/faq">FAQ</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/reward">Reward</Link>
         <Link to="/register">Join Us</Link>
-        <div
-          className="bottom-search-bar-mobile"
-          data-toggle="modal"
-          data-target="#myModal"
-        >
-          <Link>Book Now</Link>
-        </div>
+        <Link to="/hotel/all">
+          Book Now
+        </Link>
       </div>
     </>
   );
