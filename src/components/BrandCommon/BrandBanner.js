@@ -104,32 +104,29 @@ export default function BrandBanner(props) {
         </div>
         <div className="slider-wrapper">
           <Slider {...settings}>
-            {banner &&  (
-              <div className="slider">
-                <div className="img-container">
-                  <img
-                    src={banner && banner.image}
-                    className="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div
-                  className={
-                    "overlay-container" +
-                    " " +
-                    (brand.slug == "aga-hotel" ? "agaoverlay" : "")
-                  }
-                >
-                  <div className="container">
-                    <div className="title">We Care About You</div>
-                    <div className="subtitle">
-                      Peace of mind and greater travel flexibility are yours
-                      with our extended cancellation policy.
+            {banner &&
+              banner.images.map((image) => (
+                <div className="slider">
+                  <div className="img-container">
+                    <img src={image} className="img-fluid" alt="" />
+                  </div>
+                  <div
+                    className={
+                      "overlay-container" +
+                      " " +
+                      (brand.slug == "aga-hotel" ? "agaoverlay" : "")
+                    }
+                  >
+                    <div className="container">
+                      <div className="title">We Care About You</div>
+                      <div className="subtitle">
+                        Peace of mind and greater travel flexibility are yours
+                        with our extended cancellation policy.
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              ))}
           </Slider>
         </div>
 
