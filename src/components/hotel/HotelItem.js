@@ -18,7 +18,7 @@ function HotelItem({ props }) {
                 <div className="sub-hotel-name">
                   <address>
                     <i className="fas fa-map-marker-alt"></i>{" "}
-                    {hotelItem.contact.street}, {hotelItem.contact.city},{" "}
+                    {hotelItem.contact.street} {hotelItem.contact.city},{" "}
                     {hotelItem.contact.state}
                   </address>
                 </div>

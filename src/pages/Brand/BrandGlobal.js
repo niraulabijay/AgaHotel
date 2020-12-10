@@ -16,6 +16,7 @@ function BrandGlobal() {
 
   const top = () => {
     window.scrollTo(0, 0);
+    document.getElementById("mySidenav").style.width = "0";
   };
 
   useEffect(() => {

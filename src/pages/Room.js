@@ -5,6 +5,7 @@ import SearchNavbar from "../components/SearchNavbar";
 export default function Room() {
 	useEffect(()=>{
 		window.scrollTo(0, 0);
+		document.getElementById("mySidenav").style.width = "0";
 	  },[])
 	return (
 		<>

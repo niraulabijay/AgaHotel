@@ -5,10 +5,12 @@ import Designed from "../components/home/Designed";
 import Facilities from "../components/home/Facilities";
 import Welcome from "../components/home/Welcome";
 import BrandSection from "../components/home/BrandSection";
+import BrandContact from "../components/BrandCommon/BrandContact";
 
 export default function Home() {
   useEffect(()=>{
     window.scrollTo(0, 0);
+    document.getElementById("mySidenav").style.width = "0";
   },[])
   return (
     <>
@@ -17,6 +19,7 @@ export default function Home() {
       <Designed />
       <BrandSection />
       <Facilities />
+      <BrandContact />
       <div className="top-footer">
         <div className="container">
           <div className="item-container">
@@ -32,5 +35,6 @@ export default function Home() {
         </div>
       </div>
     </>
+
   );
 }

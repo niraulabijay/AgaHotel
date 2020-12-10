@@ -6,6 +6,7 @@ import RegisterForm from "../components/Register/RegisterForm";
 export default function Register() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.getElementById("mySidenav").style.width = "0";
   }, []);
   return (
     <>

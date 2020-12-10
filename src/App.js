@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -21,6 +21,9 @@ import ContactUs from "./pages/ContactUs";
 import Reward from "./pages/Reward";
 
 function App() {
+  useEffect(() => {
+     document.getElementById("mySidenav").style.width = "0";
+  }, [])
   return (
     <Router>
       <MobileNavbar />

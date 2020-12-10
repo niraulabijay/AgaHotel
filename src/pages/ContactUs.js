@@ -8,6 +8,7 @@ import FAQContent from "../components/FAQ/FAQContent";
 function ContactUs() {
   useEffect(()=>{
     window.scrollTo(0, 0);
+    document.getElementById("mySidenav").style.width = "0";
   },[])
   return (
     <>

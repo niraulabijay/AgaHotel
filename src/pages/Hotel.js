@@ -11,7 +11,7 @@ export default function Hotel() {
   const [hotel, setHotel] = useState();
   const scrollTop = () => {
     window.scrollTo(0, 0);
-    console.log("scroll");
+    document.getElementById("mySidenav").style.width = "0";
   };
   useEffect(() => {
     scrollTop();

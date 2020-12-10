@@ -73,6 +73,9 @@ export default function Footer() {
                 <li>
                   <Link to="/">Privacy Policy</Link>
                 </li>
+                <li>
+                  <Link to="/register">Join Now</Link>
+                </li>
               </ul>
             </div>
             <div className="col-md-2">

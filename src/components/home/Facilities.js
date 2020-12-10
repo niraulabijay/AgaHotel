@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function Facilities() {
 	return (
 		<>
@@ -62,13 +63,13 @@ export default function Facilities() {
 					</div>
 				</div>
 			</div>
-			<div className="bottom-image">
+			{/* <div className="bottom-image">
 				<img
 					src={require("../../assets/images/bottom baner.png")}
 					className="img-fluid"
 					alt=""
 				/>
-			</div>
+			</div> */}
 		</>
 	);
 }

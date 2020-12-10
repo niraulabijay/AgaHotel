@@ -31,6 +31,7 @@ const onSubmit = (data) => {
 export default function Franchise() {
   useEffect(()=>{
     window.scrollTo(0, 0);
+    document.getElementById("mySidenav").style.width = "0";
   },[])
   return (
     <>
