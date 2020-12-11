@@ -949,6 +949,7 @@ a:hover {
   .banner .slick-slide img {
     height: calc(100vh - 160px);
     width: 100%;
+    object-fit:cover;
   }
   .banner .navbar-wrapper {
     position: relative;
