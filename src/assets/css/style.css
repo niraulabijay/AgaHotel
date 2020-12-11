@@ -940,14 +940,14 @@ a:hover {
 
 @media (max-width: 996px) {
   .banner {
-    height: calc(100vh - 120px);
+    height: 60vh;
   }
   .banner .slick-prev,
   .banner .slick-next {
     display: none !important;
   }
   .banner .slick-slide img {
-    height: calc(100vh - 160px);
+    height: 60vh;
     width: 100%;
     object-fit:cover;
   }
@@ -955,7 +955,7 @@ a:hover {
     position: relative;
   }
   .banner .slider {
-    height: calc(100vh - 160px);
+    height: 60vh;
   }
   .banner .slider .overlay-container {
     top: 0px;
