@@ -54,7 +54,8 @@ export default function Location({ hotelbrand }) {
                         <div>
                           {loca.contact.state} {loca.contact.postcode}
                         </div>
-                        <div>{loca.contact.phone_1}</div>
+                        <br/>
+                        <div><i className="fa fa-phone" />&nbsp;{loca.contact.phone_1}</div>
                       </div>
                     </div>
                   </div>
