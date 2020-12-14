@@ -11,7 +11,7 @@ function Welcome() {
                 <div class="header">Welcome</div>
                 <div className="line"></div>
                 <div class="text">
-                We welcome  you to the friendly neighborhood hotel Earth Inn. 
+                We welcome  you to the friendly neighborhood hotel Erth Inn. 
                 We provide you with very clean and comfortable rooms and make sure you get the best customer service. 
                 We believe in providing a 5-star service at an affordable price.
                 </div>
