@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Field, Form, ErrorMessage} from 'formik';
 import * as Yup from 'yup'
 import TextError from '../FormikComponent/TextError';
+import FormikControl from '../FormikComponent/FormikControl';
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
@@ -39,17 +40,46 @@ const Contact = () => {
                         onSubmit={onSubmit}
                         validationSchema={ValidationSchema}
                         >
+                        {(formik) => (
                             <Form>
-                                <div className="form-group">
+                                {/* <div className="form-group">
                                     <label htmlFor="name">Name</label>
                                     <Field className="form-control" name="name" type="text" id="name" />
                                     <ErrorMessage name="name" component={TextError}/>
-                                </div>
-                                <div className="form-group">
+                                </div> */}
+                                <FormikControl
+                                name="name"
+                                label="Name"
+                                type='text'
+                                control='input'
+                                />
+                                <FormikControl
+                                name="email"
+                                label="Email"
+                                type='email'
+                                control='email'
+                                />
+                                <FormikControl
+                                name="phone"
+                                label="Phone"
+                                type='phone'
+                                control='phone'
+                                />
+                                <FormikControl
+                                name="message"
+                                label="Message"
+                                control='message'
+                                />
+                                {/* <FormikControl
+                                name="message"
+                                label="Message"
+                                control='message'
+                                type="textarea"
+                                /> */}
+                                {/* <div className="form-group">
                                     <label htmlFor="email">Email Address</label>
                                     <Field className="form-control" name="email" type="text" id="email" />
                                     <ErrorMessage name="email" component={TextError}/>
-
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="number">Phone Number</label>
@@ -60,13 +90,15 @@ const Contact = () => {
                                     <label htmlFor="number">Message</label>
                                     <Field conponent="text-area" className="form-control" name="message" id="message" cols="30" rows="1" />
                                     <ErrorMessage name="message" component={TextError}/>
-                                </div>
+                                </div> */}
+                                
                                 <div className="form-btn">
                                     <button type="submit">
                                         Send
                                     </button>
                                 </div>
                             </Form>
+                        )}
                         </Formik>
                         </div>
                     </div>
