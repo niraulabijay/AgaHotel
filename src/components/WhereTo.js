@@ -23,6 +23,9 @@ function WhereTo(props) {
         $("body").removeClass("modal-open");
         $("#myModal .close").click();
       })
+      // .then(()=>{
+
+      // })
 
       .catch((err) => console.log(err, "error"));
   };
