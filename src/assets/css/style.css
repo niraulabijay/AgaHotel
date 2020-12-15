@@ -10,6 +10,10 @@ a:hover {
   text-decoration: none;
 }
 
+input:focus {
+  font-size: 16px;
+}
+
 .rdrDateRangeWrapper {
   z-index: 999;
   position: absolute !important;
@@ -535,7 +539,7 @@ a:hover {
   padding: 60px 20px 20px 20px;
   position: relative;
   color: #707070;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .search-wrapper .item .item-sup {
@@ -566,6 +570,7 @@ a:hover {
 .search-wrapper .item input:focus {
   outline: none;
   border-bottom: 1px solid #000;
+  font-size: 16px;
 }
 
 .search-wrapper .item input::-webkit-input-placeholder {
@@ -600,6 +605,7 @@ a:hover {
 .search-wrapper .item select:focus {
   outline: none;
   border-bottom: 1px solid #000;
+  font-size: 16px;
 }
 
 .search-wrapper .item-calender {
@@ -646,6 +652,11 @@ a:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  .search-wrapper input,
+  .search-wrapper select {
+    width: 100%;
+    font-size: 16px;
+  }
   .search-wrapper .item {
     padding: 30px 0px 12px 10px;
     border-right: none;
@@ -658,6 +669,7 @@ a:hover {
   .search-wrapper .item input,
   .search-wrapper .item select {
     width: 100%;
+    font-size: 16px;
   }
   .search-wrapper .item:active,
   .search-wrapper .item:focus {
