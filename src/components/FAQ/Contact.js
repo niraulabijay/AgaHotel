@@ -4,24 +4,28 @@ import * as Yup from 'yup'
 // import TextError from '../FormikComponent/TextError';
 import FormikControl from '../FormikComponent/FormikControl';
 
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-const ValidationSchema =  Yup.object({
-    name: Yup.string().required('The name field is required'),
-    email: Yup.string().email('Invalid Email Address').required('The email field is required'),
-    phone: Yup.string().required('The phone number is required').matches(phoneRegExp, 'Phone number not valid'),
-    message: Yup.string().required('The Message is Required')
-})
+const ValidationSchema = Yup.object({
+  name: Yup.string().required("The name field is required"),
+  email: Yup.string()
+    .email("Invalid Email Address")
+    .required("The email field is required"),
+  phone: Yup.string()
+    .required("The phone number is required")
+    .matches(phoneRegExp, "Phone number not valid"),
+  message: Yup.string().required("The Message is Required"),
+});
 const initialValue = {
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-}
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+};
 
-const onSubmit = data => {
-    console.log(data)
-}
+const onSubmit = (data) => {
+  console.log(data);
+};
 
 const Contact = () => {
     return(
@@ -76,10 +80,8 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-   
-            </div>
-       
-    )
-}
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;

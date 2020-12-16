@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function HotelFilter() {
+  function closeHotelNav() {
+    document.getElementById("filterSidenav").style.width = "0";
+  }
   return (
     <>
       <div className="hotel-filter" id="filterSidenav">
@@ -8,7 +11,7 @@ export default function HotelFilter() {
           <a
             href="javascript:void(0)"
             className="closebtn"
-            onclick="closeHotelNav()"
+            onClick={closeHotelNav}
           >
             &times;
           </a>

@@ -1,4 +1,4 @@
-import React ,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import SearchNavbar from "../components/SearchNavbar";
 import "../assets/css/franchise.css";
@@ -7,7 +7,6 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import FixedNavbar from "../components/FixedNavbar";
 import FranchiseBanner from "../components/Franchise/FranchiseBanner";
 import FormikControl from "../components/FormikComponent/FormikControl";
-
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 const initialValue = {
@@ -30,10 +29,10 @@ const onSubmit = (data) => {
   console.log(data);
 };
 export default function Franchise() {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
     document.getElementById("mySidenav").style.width = "0";
-  },[])
+  }, []);
   return (
     <>
       <div className="fixed-navbar">
