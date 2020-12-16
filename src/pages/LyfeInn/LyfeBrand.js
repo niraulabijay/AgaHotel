@@ -18,7 +18,7 @@ export default function LyfeBrand({data}) {
       <div className="lyfe-brand">
         <Welcome />
         <Services services={services} />
-        <Room hotelbrand={brand.slug} />
+        <Room hotelbrand={brand.slug} brand={brand} />
         <BrandContact />
       </div>
     </>

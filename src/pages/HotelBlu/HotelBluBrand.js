@@ -19,7 +19,7 @@ export default function HotelBluBrand({data}) {
         <Welcome />
         <Experience experience={experience} brand={brand} />
         <WeProvide services={services} />
-        <Room hotelbrand={brand.slug} />
+        <Room hotelbrand={brand.slug} brand={brand} />
         <BrandContact />
       </div>
     </>

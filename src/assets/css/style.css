@@ -209,7 +209,12 @@ input:focus {
 }
 
 .sidenav a:hover {
-  color: #62668e;
+  border: 1px solid #62668e;
+}
+
+.sidenav .nav_booknow {
+  background-color: #ff9800;
+  color: #ffffff;
 }
 
 .sidenav .closebtn {

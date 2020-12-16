@@ -12,13 +12,14 @@ export default function EarthBrand({ data }) {
     useEffect(() => {
       window.scrollTo(0, 0);
     }, []);
+ 
   return (
     <>
       <BrandBanner brand={brand} banner={banner} brandcolor="erthnav" />
       <div className="earthinn-brand">
         <Welcome />
         <Services services={services} />
-        <Room hotelbrand={brand.slug} />
+        <Room hotelbrand={brand.slug}  brand= {brand}/>
         <Location hotelbrand={brand.slug} />
         <BrandContact />
       </div>

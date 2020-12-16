@@ -105,6 +105,7 @@ export default function SearchNavField() {
   };
   return (
     <div className="search-wrapper" id="searchBar">
+      
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
