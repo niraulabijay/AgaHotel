@@ -22,8 +22,8 @@ import Reward from "./pages/Reward";
 
 function App() {
   useEffect(() => {
-     document.getElementById("mySidenav").style.width = "0";
-  }, [])
+    document.getElementById("mySidenav").style.width = "0";
+  }, []);
   return (
     <Router>
       <MobileNavbar />

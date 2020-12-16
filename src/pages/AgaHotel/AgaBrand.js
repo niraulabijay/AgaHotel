@@ -16,13 +16,13 @@ export default function AgaBrand({ data }) {
     }, []);
   return (
     <>
-      <BrandBanner brand={brand} banner={banner} brandcolor = "aganav" />
+      <BrandBanner brand={brand} banner={banner} brandcolor="aganav" />
       <div className="aga-brand">
         <Welcome />
         <Experience brand={brand} experience={experience} />
         <WeProvide />
         <DiscoverMore services={services} />
-        <Room hotelbrand= {brand.slug} />
+        <Room hotelbrand={brand.slug} brand={brand} />
         <BrandContact />
       </div>
     </>

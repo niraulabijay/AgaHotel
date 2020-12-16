@@ -12,14 +12,11 @@ export default function MobileNavbar() {
         <a href="" className="closebtn" onClick={closeNav}>
           &times;
         </a>
+        <Link className="nav_booknow" to="/hotel/all">Book Now</Link>
+        <Link to="/register">Join Us</Link>
         <Link to="/about">About</Link>
         <Link to="/franchise">Franchise</Link>
-        <Link to="/faq">FAQ</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/register">Join Us</Link>
-        <Link to="/hotel/all">
-          Book Now
-        </Link>
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import Axios from "axios";
 import axiosInstance from "../../helpers/axios";
 
-export default function Room({ hotelbrand }) {
+export default function Room({ hotelbrand , brand }) {
   console.log(hotelbrand);
   const [room, setRoom] = useState([]);
   const settings = {
@@ -81,9 +81,7 @@ export default function Room({ hotelbrand }) {
           <div className="row">
             <div className="col-md-3 room-detail">
               <p>
-                Lyfe Inn rooms are designed to make sure you feel very
-                comfortable and cozy. We use top-grade mattresses, clean and
-                high quality bed sheets and very cozy pillows.
+                {brand.description}
               </p>
             </div>
             <div className="col-md-9">
