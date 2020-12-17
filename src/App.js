@@ -63,7 +63,7 @@ function App() {
             <Register />
           </Route>
           <Route exact path="/brandSection">
-            <Home brand="brand" />
+            <Home toggle="brandSection"/>
           </Route>
           <Route exact path="/">
             <Home />

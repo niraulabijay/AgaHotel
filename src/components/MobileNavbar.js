@@ -9,6 +9,13 @@ const {location} = useHistory();
     e.preventDefault();
     document.getElementById("mySidenav").style.width = "0";
   }
+
+  function toggleToBrand(e){
+    e.preventDefault();
+    document.getElementById('brandSection').scrollIntoView();
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
   // console.log(history.location.pathname,"here")
   return (
     <>
@@ -20,12 +27,14 @@ const {location} = useHistory();
           Book Now
         </Link>
         <Link to="/register">Join Us</Link>
-        {/* <Link to="/#brandSection">Brand</Link> */}
-        {location.pathname == "/" || location.pathname == "/brandSection" ? (
-          <a href="#brandSection" onClick={closeNav}>Brand</a>
-        ) : (
-          <Link to="/brandSection">Brand</Link>
-        )}
+        {/* <Link to="#brandSection" onClick={closeNav}>Brand</Link> */}
+        {
+          location.pathname == "/" || location.pathname == "/brandSection" ? (
+            <Link to="/" onClick={toggleToBrand}>Brand</Link>
+          ) : (
+            <Link to="/brandSection">Brand</Link>
+          )
+        }
         {/* <a href="#brandSection">Brands</a> */}
         <Link to="/about">About</Link>
         <Link to="/franchise">Franchise</Link>

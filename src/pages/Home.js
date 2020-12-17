@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Banner from "../components/Banner";
 import Designed from "../components/home/Designed";
 import Facilities from "../components/home/Facilities";
@@ -7,14 +7,14 @@ import Welcome from "../components/home/Welcome";
 import BrandSection from "../components/home/BrandSection";
 import BrandContact from "../components/BrandCommon/BrandContact";
 
-export default function Home({ brand }) {
-  // const { location } = useHistory();
-  console.log(brand);
+export default function Home({ toggle }) {
+  const { pathname, hash } = useLocation();
+  console.log(hash);
   useEffect(() => {
     // window.scrollTo(0, 0);
-    brand && document.getElementById("brandSection").scrollIntoView();
+    toggle && document.getElementById(toggle).scrollIntoView();
     document.getElementById("mySidenav").style.width = "0";
-  }, [brand]);
+  }, [pathname]);
 
   return (
     <>
