@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 import axiosInstance from "../../helpers/axios";
+import Skeleton from 'react-loading-skeleton';
 
 export default function BrandSection() {
   const [brands, setBrands] = useState([]);
@@ -41,7 +42,7 @@ export default function BrandSection() {
         <div className="brand-list">
           <div className="container">
             <div className="row">
-              {brands &&
+              {brands.length ?
                 brands.map((brand, index) => (
                   <div className="col-lg-3 col-6">
                     <a href="" className="brand-img">
@@ -50,7 +51,16 @@ export default function BrandSection() {
                       </Link>
                     </a>
                   </div>
-                ))}
+                ))
+              :
+                  [1,2,3,4].map((none,index)=>(
+                    <div className="col-lg-3 col-6">
+                      <a href="" className="brand-img">
+                        <Skeleton width={150} height={100} />
+                      </a>
+                    </div>
+                  ))
+              }
             </div>
           </div>
         </div>
