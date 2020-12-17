@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import {Link} from "react-router-dom"
+import React, { useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 import Banner from "../components/Banner";
 import Designed from "../components/home/Designed";
 import Facilities from "../components/home/Facilities";
@@ -7,11 +7,15 @@ import Welcome from "../components/home/Welcome";
 import BrandSection from "../components/home/BrandSection";
 import BrandContact from "../components/BrandCommon/BrandContact";
 
-export default function Home() {
-  useEffect(()=>{
-    window.scrollTo(0, 0);
+export default function Home({ brand }) {
+  // const { location } = useHistory();
+  console.log(brand);
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+    brand && document.getElementById("brandSection").scrollIntoView();
     document.getElementById("mySidenav").style.width = "0";
-  },[])
+  }, [brand]);
+
   return (
     <>
       <Banner />
@@ -26,7 +30,7 @@ export default function Home() {
             <div className="item-wrapper">
               <div className="title">Contact AGA Hotels</div>
               <div className="button-container">
-              <Link to="/contact" className="mybtn">
+                <Link to="/contact" className="mybtn">
                   Need Help?
                 </Link>
               </div>
@@ -35,6 +39,5 @@ export default function Home() {
         </div>
       </div>
     </>
-
   );
 }
