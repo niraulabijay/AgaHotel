@@ -12,7 +12,7 @@ const {location} = useHistory();
 
   function toggleToBrand(e){
     e.preventDefault();
-    document.getElementById('brandSection').scrollIntoView();
+    document.getElementById('brandSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
     document.getElementById("mySidenav").style.width = "0";
   }
 

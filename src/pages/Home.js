@@ -12,8 +12,8 @@ export default function Home({ toggle }) {
   console.log(hash);
   useEffect(() => {
     // window.scrollTo(0, 0);
-    toggle && document.getElementById(toggle).scrollIntoView();
-    document.getElementById("mySidenav").style.width = "0";
+    toggle && document.getElementById(toggle).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById("mySidenav").style.width = "0"; 
   }, [pathname]);
 
   return (
