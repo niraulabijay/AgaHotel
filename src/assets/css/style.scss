@@ -825,21 +825,22 @@ input:focus {
 
 @media (max-width: 996px) {
   .banner {
-    height: calc(100vh - 120px);
+    height: 60vh;
 
     .slick-prev,
     .slick-next {
       display: none !important;
     }
     .slick-slide img {
-      height: calc(100vh - 160px);
+      height: 60vh;
       width: 100%;
+      object-fit: cover;
     }
     .navbar-wrapper {
       position: relative;
     }
     .slider {
-      height: calc(100vh - 160px);
+      height: 60vh;
       .overlay-container {
         top: 0px;
         .title {
