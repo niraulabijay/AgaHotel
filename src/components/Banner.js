@@ -55,12 +55,9 @@ export default function Banner() {
             </Link>
             <div className="primary-content">
               <ul className="first-navbar-wrapper">
-                <li>
-                  <i class="fas fa-phone-alt"></i>
-                  <select name="" id="">
-                    <option value="">+1 (415) - 555 2671 </option>
-                    <option value="">+1 (415) - 554 2661 </option>
-                  </select>
+                <li style={{color: "white"}}>
+                  <i class="fas fa-phone-alt" style={{paddingRight: "5px"}}></i>
+                    +1 (818) 395-9949
                 </li>
                 <li>
                   <Link to="/register">Join Us</Link>

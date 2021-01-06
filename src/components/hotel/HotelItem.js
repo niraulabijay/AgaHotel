@@ -39,11 +39,11 @@ function HotelItem({ props }) {
                     <div className="description">
                       {hotelItem.short_description}
                     </div>
-                    <div className="readmore-btn">
+                    {/* <div className="readmore-btn">
                       <a href="">
                         Read More <i className="fa fa-caret-down"></i>
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
