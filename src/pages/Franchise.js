@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import SearchNavbar from "../components/SearchNavbar";
 import "../assets/css/franchise.css";
@@ -7,6 +7,8 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import FixedNavbar from "../components/FixedNavbar";
 import FranchiseBanner from "../components/Franchise/FranchiseBanner";
 import FormikControl from "../components/FormikComponent/FormikControl";
+import axiosInstance from "../helpers/axios";
+import { tr } from "date-fns/locale";
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 const initialValue = {
@@ -25,10 +27,22 @@ const ValidationSchema = Yup.object({
     .matches(phoneRegExp, "Phone number not valid"),
   message: Yup.string().required("The Message is Required"),
 });
-const onSubmit = (data) => {
-  console.log(data);
-};
+
 export default function Franchise() {
+  const [loading, setLoading] = useState(false)
+
+  const onSubmit = (data, onSubmitProps) => {
+    setLoading(true)
+    axiosInstance.post('/franchise', data).then(response => {
+      setLoading(false)
+      onSubmitProps.resetForm()
+      console.log(response)}).catch(
+        err => {
+          setLoading(false)
+          console.log(err)
+        }
+      )
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
     document.getElementById("mySidenav").style.width = "0";
@@ -120,6 +134,11 @@ export default function Franchise() {
                                 />
                                 <div className="form-btn">
                                     <button type="submit">
+                                    { loading &&
+                                        <span class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </span>
+                                      }
                                         Send
                                     </button>
                                 </div>

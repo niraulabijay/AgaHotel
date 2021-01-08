@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Formik, Field, Form } from "formik";
 import FormikControl from "./FormikComponent/FormikControl";
 import axiosInstance from "../helpers/axios";
@@ -7,9 +7,11 @@ import $ from "jquery";
 
 function WhereTo(props) {
   const { initialValues, validationSchema } = props;
+  const [loading, setLoading] = useState(false);
   let history = useHistory();
 
   const onSubmit = (data) => {
+    setLoading(true);
     let newVar = { destination_id: data.destination.value };
 
     axiosInstance
@@ -22,12 +24,16 @@ function WhereTo(props) {
         $(".modal-backdrop").remove();
         $("body").removeClass("modal-open");
         $("#myModal .close").click();
+        setLoading(false);
       })
       // .then(()=>{
 
       // })
 
-      .catch((err) => console.log(err, "error"));
+      .catch((err) => {
+        console.log(err, "error")
+        setLoading(false)
+      });
   };
   return (
     <>
@@ -88,7 +94,13 @@ function WhereTo(props) {
                     </div>
 
                     <div className="button-container">
-                      <button type="submit">Search</button>
+                      <button type="submit">
+                        { loading &&
+                          <span class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </span>
+                        }
+                      Search</button>
                     </div>
                   </div>
                 </div>
