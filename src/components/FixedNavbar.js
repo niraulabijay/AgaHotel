@@ -15,7 +15,7 @@ export default function FixedNavbar() {
       <div className="navbar-wrapper">
         <div className="primary-navbar container">
           <div className="bars-call d-block d-lg-none">
-            <i class="fas fa-phone-volume"></i>
+          <a href="tel:1 (747) 242- 3136"><i class="fas fa-phone-volume"></i></a>
           </div>
           <Link to="/" className="logo-container">
             <img

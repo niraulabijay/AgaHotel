@@ -44,7 +44,7 @@ export default function Banner() {
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
             <div className="bars-call d-block d-lg-none">
-              <i class="fas fa-phone-volume"></i>
+            <a href="tel:1 (747) 242- 3136"><i class="fas fa-phone-volume"></i></a>
             </div>
             <Link to="/" className="logo-container">
               <img
@@ -57,7 +57,7 @@ export default function Banner() {
               <ul className="first-navbar-wrapper">
                 <li style={{color: "white"}}>
                   <i class="fas fa-phone-alt" style={{paddingRight: "5px"}}></i>
-                    +1 (818) 395-9949
+                  <a href="tel:1 (747) 242- 3136">+1 (747) 242- 3136</a>
                 </li>
                 <li>
                   <Link to="/register">Join Us</Link>

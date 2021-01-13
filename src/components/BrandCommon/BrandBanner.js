@@ -54,7 +54,7 @@ export default function BrandBanner(props) {
             <div className="bars-call d-block d-lg-none">
               {/* <i class="fas fa-phone-alt"></i> */}
               {/* <i class="fas fa-phone-alt"></i> */}
-              <i class="fas fa-phone-volume"></i>
+              <a href="tel:1 (747) 242- 3136"><i class="fas fa-phone-volume"></i></a>
             </div>
             <Link to="/" className="logo-container brand-logo">
               <img src={brand ? brand.logo : ""} className="img-fluid" alt="" />
@@ -72,7 +72,7 @@ export default function BrandBanner(props) {
               <ul className="first-navbar-wrapper">
               <li style={{color: "white"}}>
                   <i class="fas fa-phone-alt" style={{paddingRight: "5px"}}></i>
-                    +1 (818) 395-9949
+                    <a href="tel:1 (747) 242- 3136">+1 (747) 242- 3136</a>
                 </li>
                 <li>
                   <Link to="/register">Join Us</Link>
