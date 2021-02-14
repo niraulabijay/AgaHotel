@@ -27,8 +27,10 @@ export default function FixedNavbar() {
           <div className="primary-content">
             <ul className="first-navbar-wrapper">
               <li style={{color: "white"}}>
+              <a href="tel:1 (747) 242- 3136">
                   <i class="fas fa-phone-alt" style={{paddingRight: "5px"}}></i>
-                    +1 (818) 395-9949
+                    +1 (747) 242- 3136
+                    </a>
                 </li>
               <li className="fixednav-joinus">
                 <Link to="/register">Join Us</Link>
