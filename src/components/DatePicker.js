@@ -49,7 +49,6 @@ const DatePicker = (props) => {
                     )}
                     onClick={() => setOpen(!open)}
                   ></input>
-                  
                 </>
               );
             }}

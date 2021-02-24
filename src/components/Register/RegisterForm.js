@@ -72,6 +72,7 @@ function RegisterForm() {
           <a href=""> Join Now </a>
         </div>
       </form>
+   
     </>
   );
 }
