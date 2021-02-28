@@ -222,19 +222,21 @@ input:focus {
   }
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0; // remove the gap so it doesn't close
-}
+.second-navbar-wrapper {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+  }
 
-.dropdown-menu {
-  padding: 0px !important;
-  border-radius: 0.2rem !important;
-}
+  .dropdown-menu {
+    padding: 0px !important;
+    border-radius: 0.2rem !important;
+  }
 
-.dropdown-item {
-  color: #000 !important;
-  font-size: 14px;
+  .dropdown-item {
+    color: #000 !important;
+    font-size: 14px;
+  }
 }
 
 // .dropdown-item:hover {
