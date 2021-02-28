@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import Axios from "axios";
 import axiosInstance from "../../helpers/axios";
 
-export default function Room({ hotelbrand , brand }) {
+export default function Room({ hotelbrand, brand }) {
   console.log(hotelbrand);
   const [room, setRoom] = useState([]);
   const settings = {
@@ -80,9 +80,7 @@ export default function Room({ hotelbrand , brand }) {
           <div className="main-title text-center">Rooms</div>
           <div className="row">
             <div className="col-md-3 room-detail">
-              <p>
-                {brand.description}
-              </p>
+              <p>{brand.description}</p>
             </div>
             <div className="col-md-9">
               <div className="room-slider-wrapper">
@@ -110,7 +108,7 @@ export default function Room({ hotelbrand , brand }) {
                               </span>
                             </div>
                             <div className="book-btn">
-                              <a href="">Book</a>
+                              <a href={r.booking_url}>Book</a>
                             </div>
                           </div>
                         </div>

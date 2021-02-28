@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import SearchNavField from "./SearchNavField";
+import axiosInstance from "../helpers/axios";
+import Axios from "axios";
+
 export default function Banner() {
   const settings = {
     dots: true,
@@ -10,6 +13,8 @@ export default function Banner() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const [brands, setBrands] = useState([]);
 
   useEffect(() => {
     var navbar = document.querySelector(".navbar-wrapper");
@@ -34,6 +39,27 @@ export default function Banner() {
     }
   }, []);
 
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get("/brands", {
+          cancelToken: source.token,
+        });
+ 
+        setBrands((await response).data.brands);
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
+        }
+      }
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, []);
+
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
@@ -44,7 +70,9 @@ export default function Banner() {
         <div className="navbar-wrapper">
           <div className="primary-navbar container">
             <div className="bars-call d-block d-lg-none">
-            <a href="tel:1 (747) 242- 3136"><i class="fas fa-phone-volume"></i></a>
+              <a href="tel:1 (747) 242- 3136">
+                <i class="fas fa-phone-volume"></i>
+              </a>
             </div>
             <Link to="/" className="logo-container">
               <img
@@ -55,8 +83,11 @@ export default function Banner() {
             </Link>
             <div className="primary-content">
               <ul className="first-navbar-wrapper">
-                <li style={{color: "white"}}>
-                  <i class="fas fa-phone-alt" style={{paddingRight: "5px"}}></i>
+                <li style={{ color: "white" }}>
+                  <i
+                    class="fas fa-phone-alt"
+                    style={{ paddingRight: "5px" }}
+                  ></i>
                   <a href="tel:1 (747) 242- 3136">+1 (747) 242- 3136</a>
                 </li>
                 <li>
@@ -64,8 +95,23 @@ export default function Banner() {
                 </li>
               </ul>
               <ul className="second-navbar-wrapper">
-                <li>
+                {/* <li>
                   <a href="#brandSection">Brands</a>
+                </li> */}
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" id="navbarDropdown">
+                    Brands
+                  </a>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    {brands.map((brand) => (
+                      <Link class="dropdown-item" to={"/brand/" + brand.slug}>
+                        {brand.title}
+                      </Link>
+                    ))}
+                  </div>
                 </li>
                 <li>
                   <NavLink to="/franchise">Franchise</NavLink>
@@ -80,9 +126,7 @@ export default function Banner() {
                 </li> */}
                 <li>
                   <Link to="/hotel/all">
-                    <span className="booking-btn" >
-                      Book Now
-                    </span>
+                    <span className="booking-btn">Book Now</span>
                   </Link>
                 </li>
               </ul>

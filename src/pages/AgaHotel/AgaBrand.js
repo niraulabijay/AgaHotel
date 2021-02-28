@@ -8,12 +8,12 @@ import Experience from "../../components/AgaHotel/Experience";
 import Room from "../../components/BrandCommon/Room";
 
 export default function AgaBrand({ data }) {
-
   const { brand, banner, services, experience, ...rest } = data;
-  console.log(data.brand.slug)
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.getElementById("mySidenav").style.width = "0";
+  }, []);
   return (
     <>
       <BrandBanner brand={brand} banner={banner} brandcolor="aganav" />

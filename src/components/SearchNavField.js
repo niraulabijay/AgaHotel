@@ -15,7 +15,7 @@ import RoomSelector from "./RoomSelector";
 import FormikControl from "./FormikComponent/FormikControl";
 import WhereTo from "./WhereTo";
 import axiosInstance from "../helpers/axios";
-import {useHistory} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 const validationSchema = Yup.object({
   destination: Yup.string().required("This Field Cannot be Empty"),
@@ -29,17 +29,15 @@ export default function SearchNavField() {
   const [adultNumber, setAdultNumber] = useState(0);
 
   const onSubmit = (data) => {
-    // alert("hello");
- 
-    console.log(data.destination.value)
-    let newVar = {destination_id : data.destination.value};
-   
-     axiosInstance.post('/booking/hotels', {destination_id : data.destination.value ? data.destination.value : "all"}).
-    //  then(res=>   console.log(res.data))   
-     then(res=>   history.push(`/hotel/${res.data.destination_id}`)   )
+    let newVar = { destination_id: data.destination.value };
 
-     
-     .catch(err => console.log(err, 'error'));
+    axiosInstance
+      .post("/booking/hotels", {
+        destination_id: data.destination.value ? data.destination.value : "all",
+      })
+      .then((res) => history.push(`/hotel/${res.data.destination_id}`))
+
+      .catch((err) => console.log(err, "error"));
   };
 
   const initialValues = {
@@ -105,7 +103,6 @@ export default function SearchNavField() {
   };
   return (
     <div className="search-wrapper" id="searchBar">
-      
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}

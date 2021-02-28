@@ -1,4 +1,5 @@
 import React from "react";
+import Designed from "../home/Designed";
 
 function AboutContent() {
   return (
@@ -83,6 +84,8 @@ function AboutContent() {
           </div>
         </div>
       </div>
+
+      <Designed />
       <div className="overview">
         <div className="row">
           <div className="col-lg-6">

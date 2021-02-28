@@ -11,6 +11,7 @@ export default function LyfeBrand({data}) {
   const {banner, brand, experience, services, ...rest} = data;
     useEffect(() => {
       window.scrollTo(0, 0);
+        document.getElementById("mySidenav").style.width = "0";
     }, []);
   return (
     <>

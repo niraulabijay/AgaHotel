@@ -5,6 +5,7 @@ import axiosInstance from "../helpers/axios";
 
 export default function Footer() {
   const [brands, setBrands] = useState([]);
+  const [setting, setSetting] = useState();
 
   useEffect(() => {
     let source = Axios.CancelToken.source();
@@ -13,7 +14,7 @@ export default function Footer() {
         const response = axiosInstance.get("/brands", {
           cancelToken: source.token,
         });
-        console.log((await response).data);
+
         setBrands((await response).data.brands);
       } catch (error) {
         if (!Axios.isCancel(error)) {
@@ -26,7 +27,27 @@ export default function Footer() {
     };
     loadData();
   }, []);
-  console.log(brands);
+
+  useEffect(() => {
+    let source = Axios.CancelToken.source();
+    const loadData = async () => {
+      try {
+        const response = axiosInstance.get("/site_setting", {
+          cancelToken: source.token,
+        });
+
+        setSetting((await response).data.data);
+      } catch (error) {
+        if (!Axios.isCancel(error)) {
+          throw error;
+        }
+      }
+      return () => {
+        source.cancel();
+      };
+    };
+    loadData();
+  }, []);
 
   return (
     <>
@@ -96,25 +117,22 @@ export default function Footer() {
               <div className="title">Follow us on Social Media</div>
               <ul className="social-link">
                 <li>
-                  <a href="https://www.facebook.com/AGAHOTELS" target="_blank">
+                  <a href={setting && setting.facebook_link} target="_blank">
                     <i className="fab fa-facebook"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/agahotels" target="_blank">
+                  <a href={setting && setting.instagram_link} target="_blank">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/AGAHOTELS" target="_blank">
+                  <a href={setting && setting.twitter_link} target="_blank">
                     <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://www.tumblr.com/blog/view/agahotels"
-                    target="_blank"
-                  >
+                  <a href={setting && setting.tumblr_link} target="_blank">
                     <i className="fab fa-tumblr"></i>
                   </a>
                 </li>
