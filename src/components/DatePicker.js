@@ -38,7 +38,7 @@ const DatePicker = (props) => {
           <Field name="checkin">
             {({ form }) => {
               const { values } = form;
-              console.log(values);
+
               return (
                 <>
                   <input
@@ -49,7 +49,6 @@ const DatePicker = (props) => {
                     )}
                     onClick={() => setOpen(!open)}
                   ></input>
-                  
                 </>
               );
             }}

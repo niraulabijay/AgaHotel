@@ -5066,4 +5066,96 @@ input:focus {
   height: 1rem !important;
   margin-right: 5px;
 }
+
+.franchise-form .form-group .form-control {
+  border: 1px solid #d5d5d5 !important;
+  border-radius: 50px !important;
+  height: 55px !important;
+  padding: 15px 30px !important;
+  font-size: 17px !important;
+}
+
+.franchise-form .form-group .form-control::-webkit-input-placeholder {
+  color: #8e9398;
+  font-size: 14px;
+}
+
+.franchise-form .form-group .form-control:-ms-input-placeholder {
+  color: #8e9398;
+  font-size: 14px;
+}
+
+.franchise-form .form-group .form-control::-ms-input-placeholder {
+  color: #8e9398;
+  font-size: 14px;
+}
+
+.franchise-form .form-group .form-control::placeholder {
+  color: #8e9398;
+  font-size: 14px;
+}
+
+.franchise-form .form-group label {
+  display: none;
+}
+
+.franchise-form .form-group .css-yk16xz-control {
+  border: 1px solid #d5d5d5 !important;
+  border-radius: 50px !important;
+  height: 55px !important;
+  padding-left: 30px !important;
+  font-size: 14px !important;
+}
+
+.franchise-form .form-group .css-yk16xz-control .css-1wa3eu0-placeholder {
+  color: #8e9398;
+  font-size: 14px;
+}
+
+.franchise-form .form-group .css-1pahdxg-control {
+  border: 1px solid #d5d5d5 !important;
+  border-radius: 50px !important;
+  height: 55px !important;
+  padding-left: 30px !important;
+  font-size: 14px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.franchise-form .form-group .css-1pahdxg-control:hover {
+  border-color: none;
+}
+
+.franchise-form .room_number_select b:nth-of-type(1) {
+  top: 27px !important;
+  width: 15px !important;
+  height: 15px !important;
+  right: 20px !important;
+  border-radius: 10px !important;
+}
+
+.franchise-form .room_number_select b:nth-of-type(2) {
+  top: 10px !important;
+  width: 15px !important;
+  height: 15px !important;
+  right: 20px !important;
+  border-radius: 10px !important;
+}
+
+.franchise-form button {
+  padding: 15px 30px !important;
+  width: 100%;
+  border-radius: 50px !important;
+  background-color: #62668e !important;
+  border: 1px solid #62668e !important;
+  cursor: pointer;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+}
+
+.franchise-form button:hover {
+  background-color: #ffffff !important;
+  border-color: #62668e !important;
+  color: #62668e !important;
+}
 /*# sourceMappingURL=style.css.map */
