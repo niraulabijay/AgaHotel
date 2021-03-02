@@ -41,6 +41,8 @@ function BrandGlobal() {
     loadData();
   }, [slug]);
 
+  console.log(brand && brand, "hello beb");
+
   return (
     <div>
       {!brand && (
